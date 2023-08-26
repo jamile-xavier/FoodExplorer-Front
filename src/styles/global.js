@@ -4,19 +4,16 @@ export default createGlobalStyle`
 * {
     margin:0;
     padding: 0;
-    box-sizing: border-box
-}
+    box-sizing: border-box;
+   }
 
-:root {
-    font-size: 62,5%
-}
+
 
 body {
     background-color: ${({ theme }) => theme.COLORS.DARK_400};
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
-    font-size: 1.6rem;
-
     -webkit-font-smoothing: antialiased;
+    font-size: 1.6rem;
 }
 
 body, button, a, h1, h2, h3 {

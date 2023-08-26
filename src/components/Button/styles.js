@@ -8,7 +8,8 @@ export const Container = styled.button`
   border: none;
   gap: 0.8rem;
   justify-content: center;
-  margin-top: 4.8rem;
+  margin-top: 3.2rem;
   padding: 1.2rem 1.6rem;
   width: 100%;
+  font-size: 1.6rem;
 `;

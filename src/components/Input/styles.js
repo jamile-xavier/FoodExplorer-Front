@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   display: flex;
-  align-items: center;
 
   > input {
     width: 100%;
@@ -12,10 +11,17 @@ export const Container = styled.div`
     border: none;
     gap: 1.4rem;
     border-radius: 0.8rem;
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+
     background-color: ${({ theme }) => theme.COLORS.DARK_900};
 
     &:placeholder {
       color: ${({ theme }) => theme.COLORS.LIGHT_500};
+    }
+
+    @media (min-width: 1024px) {
+      margin: 0.8rem 0;
     }
   }
 `;
