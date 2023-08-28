@@ -13,7 +13,6 @@ export const Container = styled.div`
     border-radius: 0.8rem;
     margin-top: 0.8rem;
     font-size: 1.6rem;
-
     background-color: ${({ theme }) => theme.COLORS.DARK_900};
 
     &:placeholder {
