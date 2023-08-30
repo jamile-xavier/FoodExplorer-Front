@@ -8,12 +8,14 @@ import { Home } from "./pages/Home";
 import { SignIn } from "./pages/SignIn";
 import { SignUp } from "./pages/SignUp";
 import { Plate } from "./pages/Plate";
+import { AddPlate } from "./pages/AddPlate";
+import { EditPlate } from "./pages/EditPlate";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Plate />
+      <EditPlate />
     </ThemeProvider>
   </React.StrictMode>
 );
