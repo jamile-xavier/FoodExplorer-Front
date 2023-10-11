@@ -8,6 +8,7 @@ import { Stepper } from "../../components/Stepper";
 import { ButtonIcon } from "../../components/ButtonIcon";
 import { Button } from "../../components/Button";
 import { Footer } from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 export function Plate() {
   return (
@@ -15,9 +16,9 @@ export function Plate() {
       <NavBar />
       <PlateDescription>
         <Left>
-          <a>
+          <Link to="/">
             <IoIosArrowBack /> voltar
-          </a>
+          </Link>
           <img src={PlateImg} />
         </Left>
         <Right>
@@ -37,7 +38,7 @@ export function Plate() {
             <Stepper />
             <ButtonIcon icon={PiReceiptLight} title="pedir.R$25,00" />
           </Side>
-          <Button title="Editar prato" />
+          <Link to="/editplate">Editar prato</Link>
         </Right>
       </PlateDescription>
       <Footer />

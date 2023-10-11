@@ -6,15 +6,16 @@ import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
 import { IoIosArrowBack } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export function EditPlate() {
   return (
     <Container>
       <NavBar />
       <Text>
-        <a>
+        <Link to="/plate">
           <IoIosArrowBack /> voltar
-        </a>
+        </Link>
         <h2>Editar prato</h2>
       </Text>
       <Form>

@@ -2,6 +2,7 @@ import { Container, TextLogin, Form } from "./styles.js";
 import Logo from "../../assets/Logo.svg";
 import { Input } from "../../components/Input/index.jsx";
 import { Button } from "../../components/Button/index.jsx";
+import { Link } from "react-router-dom";
 
 export function SignUp() {
   return (
@@ -25,7 +26,7 @@ export function SignUp() {
         </label>
         <Button title="Criar conta" />
 
-        <a href="#">Já tenho uma conta</a>
+        <Link to="/">Já tenho uma conta</Link>
       </Form>
     </Container>
   );
