@@ -2,11 +2,11 @@ import { Container, Favorite, Side } from "./styles";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { PiPencilSimpleDuotone } from "react-icons/pi";
 import { IoIosArrowForward } from "react-icons/io";
-import PlateImg from "../../assets/Mask group-1.png";
-import { Button } from "../Button";
+import PlateImg from "../../assets/Dishes/Mask group-1.png";
+import { ButtonText } from "../ButtonText";
 import { Stepper } from "../Stepper";
 
-export function CardPlates() {
+export function CardDishes() {
   return (
     <Container>
       <Favorite>
@@ -23,7 +23,7 @@ export function CardPlates() {
 
       <Side>
         <Stepper />
-        <Button title="incluir" />
+        <ButtonText title="incluir" />
       </Side>
     </Container>
   );

@@ -9,10 +9,9 @@ export const Container = styled.div`
     height: 4.8rem;
     padding: 1.2rem 1.4rem;
     border: none;
-    gap: 1.4rem;
     border-radius: 0.8rem;
-    margin-top: 0.8rem;
     font-size: 1.6rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
     background-color: ${({ theme }) => theme.COLORS.DARK_900};
 
     &:placeholder {

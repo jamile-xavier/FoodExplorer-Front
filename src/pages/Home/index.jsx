@@ -1,34 +1,30 @@
 import { Container, Foods } from "./styles";
-import { NavBar } from "../../components/NavBar";
-import { Banner } from "../../components/Banner";
-import { CardPlates } from "../../components/CardPlates";
+import { Header } from "../../components/Header";
+
+import { CardDishes } from "../../components/CardDishes";
 import { Footer } from "../../components/Footer";
 
 export function Home() {
   return (
     <Container>
-      <NavBar />
-      <Banner
-        title="Sabores inigualáveis"
-        description="Sinta o cuidado do preparo com ingredientes selecionados."
-      />
+      <Header />
       <h2>Refeições</h2>
       <Foods>
-        <CardPlates />
-        <CardPlates />
-        <CardPlates />
+        <CardDishes />
+        <CardDishes />
+        <CardDishes />
       </Foods>
       <h2>Sobremesas</h2>
       <Foods>
-        <CardPlates />
-        <CardPlates />
-        <CardPlates />
+        <CardDishes />
+        <CardDishes />
+        <CardDishes />
       </Foods>
       <h2>Bebidas</h2>
       <Foods>
-        <CardPlates />
-        <CardPlates />
-        <CardPlates />
+        <CardDishes />
+        <CardDishes />
+        <CardDishes />
       </Foods>
 
       <Footer />

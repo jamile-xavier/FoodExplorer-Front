@@ -1,22 +1,20 @@
-import { NavBar } from "../../components/NavBar";
-import { Container, Text, Form, Buttons } from "./style";
+import { Container, Text, Form } from "./style";
 import { Tag } from "../../components/Tag";
-import { Button } from "../../components/Button";
+import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
 import { IoIosArrowBack } from "react-icons/io";
-import { Link } from "react-router-dom";
 
-export function EditPlate() {
+export function AddDish() {
   return (
     <Container>
-      <NavBar />
+      <Header />
       <Text>
-        <Link to="/plate">
+        <a>
           <IoIosArrowBack /> voltar
-        </Link>
-        <h2>Editar prato</h2>
+        </a>
+        <h2>Adicionar prato</h2>
       </Text>
       <Form>
         <label>
@@ -49,8 +47,7 @@ export function EditPlate() {
         <Textarea placeholder="Fale brevemente sobre o prato, seus ingredientes e composição" />
       </label>
       <Buttons>
-        <Button title="Excluir prato" />
-        <Button title="Salvar alterações" />
+        <ButtonText title="Salvar alterações" />
       </Buttons>
       <Footer />
     </Container>

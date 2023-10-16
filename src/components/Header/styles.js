@@ -7,7 +7,12 @@ export const Container = styled.div`
   display: flex;
 `;
 
-export const NavDesktop = styled.div`
+export const HeaderCustomer = styled.div`
+  background-color: ${({ theme }) => theme.COLORS.DARK_900};
+  width: 100%;
+`;
+
+export const HeaderCustomerDesktop = styled.div`
   display: none;
   justify-content: space-around;
   align-items: center;
@@ -37,11 +42,16 @@ export const NavDesktop = styled.div`
   }
 `;
 
-export const NavDesktopAdm = styled.div`
+export const HeaderAdmin = styled.div`
+  background-color: ${({ theme }) => theme.COLORS.DARK_900};
+  width: 100%;
+`;
+
+export const HeaderAdminDesktop = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+
   gap: 3.2rem;
   padding: 2.4rem 12rem;
   > img {
@@ -49,7 +59,6 @@ export const NavDesktopAdm = styled.div`
   }
 
   > input {
-    background-color: ${({ theme }) => theme.COLORS.DARK_900};
     background-image: url(${search});
     background-repeat: no-repeat;
     background-size: 2.4rem;
@@ -71,11 +80,12 @@ export const NavDesktopAdm = styled.div`
   }
 `;
 
-export const NavMobile = styled.div`
-  display: none;
+export const HeaderAdminMobile = styled.div`
+  display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+
   padding: 2rem;
   > img {
     width: 15rem;
@@ -91,8 +101,8 @@ export const NavMobile = styled.div`
   }
 `;
 
-export const NavMobileAdm = styled.div`
-  display: flex;
+export const HeaderCustomerMobile = styled.div`
+  display: none;
   justify-content: space-between;
   align-items: center;
   width: 100%;

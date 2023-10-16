@@ -1,19 +1,19 @@
-import { NavBar } from "../../components/NavBar";
+import { Header } from "../../components/Header";
 import { Container, Tags, Side, Left, Right, PlateDescription } from "./style";
 import { IoIosArrowBack } from "react-icons/io";
 import { PiReceiptLight } from "react-icons/pi";
-import PlateImg from "../../assets/Mask group-1.png";
+import PlateImg from "../../assets/Dishes/Mask group-1.png";
 import { Tag } from "../../components/Tag";
 import { Stepper } from "../../components/Stepper";
 import { ButtonIcon } from "../../components/ButtonIcon";
-import { Button } from "../../components/Button";
+import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";
 import { Link } from "react-router-dom";
 
-export function Plate() {
+export function DetailsDish() {
   return (
     <Container>
-      <NavBar />
+      <Header />
       <PlateDescription>
         <Left>
           <Link to="/">

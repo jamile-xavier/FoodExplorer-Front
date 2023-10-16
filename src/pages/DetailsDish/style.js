@@ -77,6 +77,7 @@ export const Left = styled.div`
 
   @media (min-width: 1024px) {
     > a {
-     margin-bottom: 4.2rem;
+      margin-bottom: 4.2rem;
     }
+  }
 `;
