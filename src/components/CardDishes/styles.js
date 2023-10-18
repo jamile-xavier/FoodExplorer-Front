@@ -23,9 +23,15 @@ export const Container = styled.div`
     display: none;
   }
 
-  > h4 {
+  > h2 {
     font-size: 1.6rem;
     color: ${({ theme }) => theme.COLORS.CAKE_200};
+  }
+
+  .FavoriteDish {
+    background: transparent;
+    border: none;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
   }
 
   @media (min-width: 1024px) {
@@ -46,21 +52,9 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
     }
 
-    > h4 {
+    > h2 {
       font-size: 3.2rem;
     }
-  }
-`;
-
-export const Favorite = styled.div`
-  margin-bottom: -2rem;
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  height: 2.2rem;
-
-  > svg {
-    width: 2.4rem;
   }
 `;
 

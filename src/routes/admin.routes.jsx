@@ -4,14 +4,16 @@ import { AddDish } from "../pages/AddDish";
 import { EditDish } from "../pages/EditDish";
 import { Home } from "../pages/Home";
 import { DetailsDish } from "../pages/DetailsDish";
+import { Profile } from "../pages/Profile";
 
 export function AdminRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/adddish" element={<AddDish />} />
-      <Route path="/editdish" element={<EditDish />} />
-      <Route path="/detailsdish" element={<DetailsDish />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/addDish" element={<AddDish />} />
+      <Route path="/editDish" element={<EditDish />} />
+      <Route path="/detailsDish" element={<DetailsDish />} />
     </Routes>
   );
 }

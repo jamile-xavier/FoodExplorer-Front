@@ -2,8 +2,8 @@ import { Header } from "../../components/Header";
 import { Container, Tags, Side, Left, Right, PlateDescription } from "./style";
 import { IoIosArrowBack } from "react-icons/io";
 import { PiReceiptLight } from "react-icons/pi";
-import PlateImg from "../../assets/Dishes/Mask group-1.png";
-import { Tag } from "../../components/Tag";
+import PlateImg from "../../assets/banner.png";
+import { Ingredient } from "../../components/Ingredients";
 import { Stepper } from "../../components/Stepper";
 import { ButtonIcon } from "../../components/ButtonIcon";
 import { ButtonText } from "../../components/ButtonText";
@@ -27,12 +27,8 @@ export function DetailsDish() {
             Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.
           </p>
           <Tags>
-            <Tag title="alface" />
-            <Tag title="cebola" />
-            <Tag title="pão naan" />
-            <Tag title="pepino" />
-            <Tag title="rabanete" />
-            <Tag title="tomate" />
+            <Ingredient title="alface" />
+            <Ingredient title="cebola" />
           </Tags>
           <Side>
             <Stepper />

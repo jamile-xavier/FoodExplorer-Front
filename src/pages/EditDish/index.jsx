@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header";
 import { Container, Text, Form, Buttons } from "./style";
-import { Tag } from "../../components/Tag";
+import { Ingredient } from "../../components/Ingredients";
 import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 export function EditDish() {
   return (
     <Container>
-      <Header />
       <Text>
         <Link to="/plate">
           <IoIosArrowBack /> voltar

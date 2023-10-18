@@ -16,7 +16,11 @@ export const Container = styled.div`
   }
 `;
 
-export const Foods = styled.div`
+export const Main = styled.div`
   display: flex;
   gap: 1.6rem;
+`;
+
+export const Banner = styled.div`
+  background-color: red;
 `;

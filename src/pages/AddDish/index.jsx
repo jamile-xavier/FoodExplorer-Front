@@ -1,10 +1,11 @@
-import { Container, Text, Form } from "./style";
-import { Tag } from "../../components/Tag";
+import { Container, Text, Form, Buttons } from "./style";
+import { Ingredient } from "../../components/Ingredients";
 import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
 import { IoIosArrowBack } from "react-icons/io";
+import { Header } from "../../components/Header";
 
 export function AddDish() {
   return (
