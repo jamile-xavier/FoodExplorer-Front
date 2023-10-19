@@ -3,7 +3,7 @@ import { Container, Tags, Side, Left, Right, PlateDescription } from "./style";
 import { IoIosArrowBack } from "react-icons/io";
 import { PiReceiptLight } from "react-icons/pi";
 import PlateImg from "../../assets/banner.png";
-import { Ingredient } from "../../components/Ingredients";
+import { IngredientTag } from "../../components/IngredientTag";
 import { Stepper } from "../../components/Stepper";
 import { ButtonIcon } from "../../components/ButtonIcon";
 import { ButtonText } from "../../components/ButtonText";
@@ -27,8 +27,8 @@ export function DetailsDish() {
             Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.
           </p>
           <Tags>
-            <Ingredient title="alface" />
-            <Ingredient title="cebola" />
+            <IngredientTag title="alface" />
+            <IngredientTag title="cebola" />
           </Tags>
           <Side>
             <Stepper />

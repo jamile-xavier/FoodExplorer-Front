@@ -68,7 +68,12 @@ function AuthProvider({ children }) {
 
   return (
     <AuthContext.Provider
-      value={{ signIn, user: data.user, signOut, updateProfile }}
+      value={{
+        signIn,
+        user: data.user,
+        signOut,
+        updateProfile,
+      }}
     >
       {children}
     </AuthContext.Provider>

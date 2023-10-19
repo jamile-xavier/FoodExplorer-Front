@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   margin: 2.4rem 3.2rem;
+
+  .ingredients {
+    background-color: ${({ theme }) => theme.COLORS.DARK_800};
+  }
 `;
 
 export const Form = styled.form`

@@ -2,7 +2,6 @@ import { Container, Side } from "./styles";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { PiPencilSimpleDuotone } from "react-icons/pi";
 import { IoIosArrowForward } from "react-icons/io";
-import PlateImg from "../../assets/banner.png";
 import { ButtonText } from "../ButtonText";
 import { Stepper } from "../Stepper";
 import { useAuth } from "../../hooks/auth";
@@ -10,6 +9,7 @@ import { USER_ROLE } from "../../utils/role";
 import dishImagePlaceholder from "../../assets/dishPlaceholder.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { api } from "../../services/api";
 
 export function CardDishes(data, ...rest) {
   const { user } = useAuth();
@@ -18,15 +18,27 @@ export function CardDishes(data, ...rest) {
     ? `${api.defaults.baseURL}/files/${data.image}`
     : dishImagePlaceholder;
 
+  /*function handleDishImage(event) {
+    const file = event.target.files[0];
+    setImageFile(file);
+
+    const imagePreview = URL.createObjectURL(file);
+    setImage(imagePreview);
+
+    const dishUpdated = Object.assign(dish, updated)
+
+    await updateDish({dish: dishUpdated, imageFile})
+  }*/
+
   return (
     <Container {...rest}>
       {[USER_ROLE.ADMIN, USER_ROLE.CUSTOMER].includes(user.role) && (
         <>
           {user.role === USER_ROLE.ADMIN && (
             <>
-              <button className="EditDish">
+              <Link to="/editDish" className="EditDish">
                 <PiPencilSimpleDuotone size={40} />
-              </button>
+              </Link>
               <img src={imageURL} alt="Imagem do prato" />
               <Link to={`/details/${data.id}`}>
                 <h3>
