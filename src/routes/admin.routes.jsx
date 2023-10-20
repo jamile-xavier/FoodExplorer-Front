@@ -12,8 +12,8 @@ export function AdminRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/addDish" element={<AddDish />} />
-      <Route path="/editDish" element={<EditDish />} />
-      <Route path="/detailsDish" element={<DetailsDish />} />
+      <Route path="/editDish/:id" element={<EditDish />} />
+      <Route path="/detailsDish/:id" element={<DetailsDish />} />
     </Routes>
   );
 }

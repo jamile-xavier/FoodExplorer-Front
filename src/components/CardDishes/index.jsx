@@ -11,24 +11,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../../services/api";
 
-export function CardDishes(data, ...rest) {
+export function CardDishes({ data, ...rest }) {
   const { user } = useAuth();
 
   const imageURL = data.image
     ? `${api.defaults.baseURL}/files/${data.image}`
     : dishImagePlaceholder;
-
-  /*function handleDishImage(event) {
-    const file = event.target.files[0];
-    setImageFile(file);
-
-    const imagePreview = URL.createObjectURL(file);
-    setImage(imagePreview);
-
-    const dishUpdated = Object.assign(dish, updated)
-
-    await updateDish({dish: dishUpdated, imageFile})
-  }*/
 
   return (
     <Container {...rest}>
@@ -36,11 +24,11 @@ export function CardDishes(data, ...rest) {
         <>
           {user.role === USER_ROLE.ADMIN && (
             <>
-              <Link to="/editDish" className="EditDish">
+              <Link to={`editDish/${data.id} `} className="EditDish">
                 <PiPencilSimpleDuotone size={40} />
               </Link>
-              <img src={imageURL} alt="Imagem do prato" />
-              <Link to={`/details/${data.id}`}>
+              <img src={imageURL} alt={data.title} />
+              <Link to={`/detailsDish/${data.id}`}>
                 <h3>
                   {data.title} <IoIosArrowForward />
                 </h3>
@@ -54,8 +42,8 @@ export function CardDishes(data, ...rest) {
               <button className="FavoriteDish">
                 <AiOutlineHeart size={40} />
               </button>
-              <img src={imageURL} alt="Imagem do prato" />
-              <Link to={`/details/${data.id}`}>
+              <img src={imageURL} alt={data.title} />
+              <Link to={`/detailsDish/${data.id}`}>
                 <h3>
                   {data.title} <IoIosArrowForward />
                 </h3>

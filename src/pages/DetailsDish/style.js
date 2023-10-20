@@ -5,7 +5,7 @@ export const Container = styled.div`
   text-align: center;
 `;
 
-export const Tags = styled.div`
+export const IngredientsTags = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;

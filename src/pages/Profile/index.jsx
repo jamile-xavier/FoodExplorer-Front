@@ -68,6 +68,7 @@ export function Profile() {
           <Input
             placeholder="Nome"
             type="text"
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </label>
@@ -75,6 +76,7 @@ export function Profile() {
           <Input
             placeholder="E-mail"
             type="text"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>

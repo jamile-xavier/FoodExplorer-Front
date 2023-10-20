@@ -15,16 +15,20 @@ import { api } from "../../services/api";
 
 export function Header() {
   const { user, signOut } = useAuth();
-  const navigation = useNavigate();
+  const navigate = useNavigate();
 
   function handleSignOut() {
-    navigation("/");
+    navigate("/");
     signOut();
   }
 
-  const avatarURL = user.avatar
+  function handleAddDish() {
+    navigate("/addDish");
+  }
+
+  /* const avatarURL = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
-    : avatarPlaceholder;
+    : avatarPlaceholder;*/
 
   return (
     <Container>
@@ -38,19 +42,15 @@ export function Header() {
                     <AiOutlineMenu size={40} />
                   </a>
                   <img src={LogoAdm} />
-                  <Profile to="/profile">
-                    <img src={avatarURL} alt={user.name} />
-                  </Profile>
                 </div>
 
                 <div className="header_desktop">
                   <img src={LogoAdm} />
                   <input placeholder="Busque por pratos ou ingredientes" />
-                  <Link to="/addDish">
-                    <p>Novo Prato</p>
-                  </Link>
+                  <ButtonText title="Novo Prato" onClick={handleAddDish} />
                   <Profile to="/profile">
-                    <img src={avatarURL} alt={user.name} />
+                    <span>Bem vindo (a) </span>
+                    <span>{user.name} </span>
                   </Profile>
                   <Logout to="/" onClick={signOut}>
                     <FiLogOut size={40} />
@@ -68,9 +68,6 @@ export function Header() {
                   </a>
                   <img src={Logo} />
                   <ButtonIcon icon={PiReceiptLight} />
-                  <Profile to="/profile">
-                    <img src={avatarURL} alt={user.name} />
-                  </Profile>
                 </div>
 
                 <div className="header_desktop">
@@ -78,7 +75,8 @@ export function Header() {
                   <input placeholder="Busque por pratos ou ingredientes" />
                   <ButtonIcon icon={PiReceiptLight} title="Pedidos" qtde="0" />
                   <Profile to="/profile">
-                    <img src={avatarURL} alt={user.name} />
+                    <span>Bem vindo (a) </span>
+                    <span>{user.name} </span>
                   </Profile>
 
                   <Logout to="/" onClick={handleSignOut}>

@@ -117,10 +117,7 @@ export function AddDish() {
         </label>
         <label>
           Categoria
-          <select
-            defaultValue={"default"}
-            onChange={(e) => setCategory(e.target.value)}
-          >
+          <select onChange={(e) => setCategory(e.target.value)}>
             <option value="default">Selecione uma categoria</option>
             <option value="meals">Refeições</option>
             <option value="desserts">Sobremesas</option>

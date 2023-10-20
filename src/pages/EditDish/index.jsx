@@ -5,8 +5,8 @@ import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import { Link } from "react-router-dom";
-import { useState, useNavigate } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Header } from "../../components/Header";
 import { api } from "../../services/api";
 
@@ -23,9 +23,8 @@ export function EditDish() {
   const [ingredients, setIngredients] = useState([]);
   const [newIngredient, setNewIngredient] = useState("");
 
+  const params = useParams();
   const [data, setData] = useState(null);
-
-  const imageURL = data && `${api.defaults.baseURL}/files/${data.image}`;
 
   function handleChangeImage(event) {
     const file = event.target.files[0];
@@ -85,9 +84,21 @@ export function EditDish() {
 
     ingredients.map((ingredient) => formData.append("ingredients", ingredient));
 
-    await api.put(`/dishes"/${$params.id}`, formData);
+    await api.put(`/dishes/${params.id}`, formData);
     alert("Prato atualizado com sucesso!");
     navigate("/");
+  }
+
+  async function handleRemoveDish() {
+    const isConfirm = confirm(
+      "Deseja realmente excluir esse prato do cardápio?"
+    );
+
+    if (isConfirm) {
+      await api.delete(`/dishes/${params.id}`);
+      alert("Prato removido do cardápio com sucesso!");
+      navigate("/");
+    }
   }
 
   useEffect(() => {
@@ -123,7 +134,7 @@ export function EditDish() {
           <Input
             placeholder="Selecione a imagem"
             type="file"
-            onChange={(e) => setImage(e.target.files[0])}
+            onChange={handleChangeImage}
           />
         </label>
         <label>
@@ -131,13 +142,14 @@ export function EditDish() {
           <Input
             placeholder="Ex.: Salada Ceasar"
             type="text"
+            value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </label>
         <label>
           Categoria
           <select
-            defaultValue={"default"}
+            value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
             <option value="default">Selecione uma categoria</option>
@@ -168,6 +180,7 @@ export function EditDish() {
           <Input
             placeholder="R$00,00"
             type="number"
+            value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
         </label>
@@ -175,12 +188,12 @@ export function EditDish() {
       <label>
         Descrição
         <Textarea
-          placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
+          value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
       </label>
       <Buttons>
-        <ButtonText title="Excluir prato" />
+        <ButtonText title="Excluir prato" onClick={handleRemoveDish} />
         <ButtonText title="Salvar alterações" onClick={handleNewDish} />
       </Buttons>
       <Footer />
