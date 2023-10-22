@@ -1,5 +1,5 @@
 import { Container, Text, Form, Buttons } from "./style";
-import { IngredientTag } from "../../components/IngredientTag";
+import { Ingredient } from "../../components/Ingredient";
 import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
@@ -160,14 +160,14 @@ export function EditDish() {
         </label>
         <div className="ingredients">
           {ingredients.map((ingredient, index) => (
-            <IngredientTag
+            <Ingredient
               key={String(index)}
               value={ingredient}
               onClick={() => handleRemoveIngredient(ingredient)}
             />
           ))}
           <label>Ingredientes</label>
-          <IngredientTag
+          <Ingredient
             isNew
             placeholder="Pão Naan"
             value={newIngredient}

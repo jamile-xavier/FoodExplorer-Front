@@ -5,11 +5,17 @@ export const Container = styled.div`
   text-align: center;
 `;
 
+export const Content = styled.div`
+  margin: 1.6rem 5.6rem;
+  text-align: center;
+`;
+
 export const IngredientsTags = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 2.4rem;
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
 `;
 
 export const Side = styled.div`
