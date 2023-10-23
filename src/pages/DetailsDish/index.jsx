@@ -94,17 +94,8 @@ export function DetailsDish() {
                           />
                         ))}
                       </IngredientsTags>
-                      <Side>
-                        <Stepper />
-                        <ButtonIcon
-                          icon={PiReceiptLight}
-                          title="incluir.R$25,00"
-                        />
-                      </Side>
-                      <Link
-                        to={`editDish/${data.id} `}
-                        className="EditDish"
-                      ></Link>
+                      <Stepper />
+                      <ButtonIcon title={`incluir . R$ ${data.price}`} />
                     </Right>
                   </PlateDescription>
                 </>

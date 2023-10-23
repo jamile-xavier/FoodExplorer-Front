@@ -17,7 +17,7 @@ export function Profile() {
   const [passwordNew, setPasswordNew] = useState();
 
   const avatarURL = user.avatar
-    ? `${api.defaults.baseURL}/files/avatarFiles/${user.avatar}`
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
     : avatarPlaceholder;
 
   const [avatar, setAvatar] = useState(avatarURL);
@@ -94,7 +94,7 @@ export function Profile() {
             onChange={(e) => setPasswordNew(e.target.value)}
           />
         </label>
-        <ButtonText title="salvar" onClick={() => handleUpdate()} />
+        <ButtonText title="Salvar" onClick={() => handleUpdate()} />
       </Form>
     </Container>
   );

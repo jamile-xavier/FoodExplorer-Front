@@ -23,7 +23,7 @@ export function Home() {
     <Container>
       <Header search={setSearch} />
       <Main>
-        <section className="Banner">
+        <section className="banner">
           <Banner>
             <img src={bannerImage} alt="banner contendo vários macarons" />
             <div className="banner_title">
@@ -34,36 +34,40 @@ export function Home() {
             </div>
           </Banner>
         </section>
+        <section className="menu">
+          <h2>Refeições</h2>
 
-        {dishes.filter((dish) => dish.category == "meals").length > 0 && (
-          <section className="Dishes">
-            {dishes
-              .filter((dish) => dish.category == "meals")
-              .map((dish) => (
-                <CardDishes data={dish} />
-              ))}
-          </section>
-        )}
+          {dishes.filter((dish) => dish.category == "meals").length > 0 && (
+            <div className="dishes">
+              {dishes
+                .filter((dish) => dish.category == "meals")
+                .map((dish) => (
+                  <CardDishes data={dish} />
+                ))}
+            </div>
+          )}
 
-        {dishes.filter((dish) => dish.category == "desserts").length > 0 && (
-          <section className="desserts">
-            {dishes
-              .filter((dish) => dish.category == "desserts")
-              .map((dish) => (
-                <CardDishes data={dish} />
-              ))}
-          </section>
-        )}
-
-        {dishes.filter((dish) => dish.category == "drinks").length > 0 && (
-          <section className="drinks">
-            {dishes
-              .filter((dish) => dish.category == "drinks")
-              .map((dish) => (
-                <CardDishes data={dish} />
-              ))}
-          </section>
-        )}
+          <h2>Sobremesas</h2>
+          {dishes.filter((dish) => dish.category == "desserts").length > 0 && (
+            <div className="desserts">
+              {dishes
+                .filter((dish) => dish.category == "desserts")
+                .map((dish) => (
+                  <CardDishes data={dish} />
+                ))}
+            </div>
+          )}
+          <h2>Bebidas</h2>
+          {dishes.filter((dish) => dish.category == "drinks").length > 0 && (
+            <div className="drinks">
+              {dishes
+                .filter((dish) => dish.category == "drinks")
+                .map((dish) => (
+                  <CardDishes data={dish} />
+                ))}
+            </div>
+          )}
+        </section>
       </Main>
       <Footer />
     </Container>

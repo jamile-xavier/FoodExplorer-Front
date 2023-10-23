@@ -3,7 +3,7 @@ import LogoAdm from "../../assets/LogoAdm.svg";
 import Logo from "../../assets/Logo.svg";
 import { FiLogOut } from "react-icons/fi";
 import { PiReceiptLight, PiUserCircleThin } from "react-icons/pi";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { ButtonText } from "../ButtonText";
 import { ButtonIcon } from "../ButtonIcon";
 import { Link } from "react-router-dom";
@@ -12,9 +12,12 @@ import { USER_ROLE } from "../../utils/role";
 import { useNavigate } from "react-router-dom";
 import avatarPlaceholder from "../../assets/avatarPlaceholder.jpg";
 import { api } from "../../services/api";
+import { useEffect, useState } from "react";
+import { Input } from "../Input";
 
-export function Header() {
+export function Header({ search }) {
   const { user, signOut } = useAuth();
+
   const navigate = useNavigate();
 
   function handleSignOut() {
@@ -46,7 +49,16 @@ export function Header() {
 
                 <div className="header_desktop">
                   <img src={LogoAdm} />
-                  <input placeholder="Busque por pratos ou ingredientes" />
+                  <label>
+                    <Input
+                      placeholder="Busque por pratos ou ingredientes"
+                      type="search"
+                      icon={AiOutlineSearch}
+                      onChange={(e) => {
+                        search(e.target.value);
+                      }}
+                    />
+                  </label>
                   <ButtonText title="Novo Prato" onClick={handleAddDish} />
                   <Profile to="/profile">
                     <span>Bem vindo (a) </span>
