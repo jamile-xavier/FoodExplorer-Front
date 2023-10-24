@@ -12,6 +12,8 @@ import { api } from "../../services/api";
 
 export function EditDish() {
   const navigate = useNavigate();
+  const params = useParams();
+  const [data, setData] = useState(null);
 
   const [image, setImage] = useState(null);
   const [imageFile, setImageFile] = useState(null);
@@ -22,9 +24,6 @@ export function EditDish() {
 
   const [ingredients, setIngredients] = useState([]);
   const [newIngredient, setNewIngredient] = useState("");
-
-  const params = useParams();
-  const [data, setData] = useState(null);
 
   function handleChangeImage(event) {
     const file = event.target.files[0];
@@ -129,6 +128,7 @@ export function EditDish() {
         <h2>Editar prato</h2>
       </Text>
       <Form>
+        <img src={image} alt="Foto do prato" />
         <label>
           Imagem do prato
           <Input

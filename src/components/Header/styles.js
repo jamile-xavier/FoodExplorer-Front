@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import search from "../../assets/search.png";
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`
@@ -49,7 +48,6 @@ export const Nav = styled.header`
 
       > input {
         background-color: ${({ theme }) => theme.COLORS.DARK_900};
-        background-image: url(${search});
         background-repeat: no-repeat;
         background-size: 2.4rem;
         background-position: left;
