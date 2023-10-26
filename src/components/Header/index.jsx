@@ -3,7 +3,7 @@ import LogoAdm from "../../assets/LogoAdm.svg";
 import Logo from "../../assets/Logo.svg";
 import { FiLogOut } from "react-icons/fi";
 import { PiReceiptLight, PiUserCircleThin } from "react-icons/pi";
-import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import { ButtonText } from "../ButtonText";
 import { ButtonIcon } from "../ButtonIcon";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import avatarPlaceholder from "../../assets/avatarPlaceholder.jpg";
 import { api } from "../../services/api";
 import { useEffect, useState } from "react";
-import { Input } from "../Input";
+import { Search } from "../Search";
 
 export function Header({ search, onOpenMenu }) {
   const { user, signOut } = useAuth();
@@ -28,11 +28,6 @@ export function Header({ search, onOpenMenu }) {
   function handleAddDish() {
     navigate("/addDish");
   }
-
-  /* const avatarURL = user.avatar
-    ? `${api.defaults.baseURL}/files/${user.avatar}`
-    : avatarPlaceholder;*/
-
   return (
     <Container>
       {[USER_ROLE.ADMIN, USER_ROLE.CUSTOMER].includes(user.role) && (
@@ -50,14 +45,7 @@ export function Header({ search, onOpenMenu }) {
                 <div className="header_desktop">
                   <img src={LogoAdm} />
                   <label>
-                    <Input
-                      placeholder="Busque por pratos ou ingredientes"
-                      type="search"
-                      icon={AiOutlineSearch}
-                      onChange={(e) => {
-                        search(e.target.value);
-                      }}
-                    />
+                    <Search />
                   </label>
                   <ButtonText title="Novo Prato" onClick={handleAddDish} />
                   <Profile to="/profile">
@@ -84,7 +72,9 @@ export function Header({ search, onOpenMenu }) {
 
                 <div className="header_desktop">
                   <img src={Logo} />
-                  <input placeholder="Busque por pratos ou ingredientes" />
+                  <label>
+                    <Search />
+                  </label>
                   <ButtonIcon icon={PiReceiptLight} title="Pedidos" qtde="0" />
                   <Profile to="/profile">
                     <span>Bem vindo (a) </span>

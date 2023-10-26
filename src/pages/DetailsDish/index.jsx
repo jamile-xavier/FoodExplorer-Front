@@ -22,6 +22,7 @@ import { useAuth } from "../../hooks/auth";
 import { USER_ROLE } from "../../utils/role";
 import { api } from "../../services/api";
 import { useState, useEffect } from "react";
+import { MobileMenu } from "../../components/MobileMenu";
 
 export function DetailsDish() {
   const { user } = useAuth();
@@ -29,8 +30,13 @@ export function DetailsDish() {
   const [data, setData] = useState(null);
   const params = useParams();
 
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
   const imageURL = data && `${api.defaults.baseURL}/files/${data.image}`;
 
+  function handleEditDish() {
+    navigate("/editDish/:id");
+  }
   useEffect(() => {
     async function fetchDishDetail() {
       const response = await api.get(`/dishes/${params.id}`);
@@ -40,7 +46,12 @@ export function DetailsDish() {
   }, []);
   return (
     <Container>
-      <Header />
+      <MobileMenu
+        menuIsOpen={menuIsOpen}
+        onCloseMenu={() => setMenuIsOpen(false)}
+      />
+
+      <Header onOpenMenu={() => setMenuIsOpen(true)} />
       {data && (
         <Content>
           {[USER_ROLE.ADMIN, USER_ROLE.CUSTOMER].includes(user.role) && (
@@ -67,9 +78,10 @@ export function DetailsDish() {
                         ))}
                       </IngredientsTags>
 
-                      <Link to={`editDish/${data.id} `} className="EditDish">
-                        Editar prato
-                      </Link>
+                      <ButtonText
+                        title="Editar prato"
+                        onClick={handleEditDish}
+                      />
                     </Right>
                   </PlateDescription>
                 </>

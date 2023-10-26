@@ -7,6 +7,7 @@ export const Container = styled.textarea`
   border: none;
   border-radius: 0.8rem;
   padding: 1.4rem;
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
   &::placeholder {
     ${({ theme }) => theme.COLORS.LIGHT_500};

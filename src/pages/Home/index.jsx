@@ -1,26 +1,17 @@
 import { Container, Main, Banner, FixedContent } from "./styles";
 import { Header } from "../../components/Header";
 
-import { CardDishes } from "../../components/CardDishes";
 import { Footer } from "../../components/Footer";
 import { useState, useEffect } from "react";
-import { api } from "../../services/api";
+
 import bannerImage from "../../assets/banner.png";
 import { MobileMenu } from "../../components/MobileMenu";
 
+import { FilterDish } from "../../components/FilterDish";
+
 export function Home() {
-  const [dishes, setDishes] = useState([]);
-  const [search, setSearch] = useState("");
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-  useEffect(() => {
-    async function fetchDishes() {
-      const response = await api.get(`/dishes?title=${search}`);
-      setDishes(response.data);
-    }
-
-    fetchDishes();
-  }, [search]);
   return (
     <Container>
       <MobileMenu
@@ -41,40 +32,8 @@ export function Home() {
               </div>
             </Banner>
           </section>
-          <section className="menu">
-            <h2>Refeições</h2>
-
-            {dishes.filter((dish) => dish.category == "meals").length > 0 && (
-              <div className="dishes">
-                {dishes
-                  .filter((dish) => dish.category == "meals")
-                  .map((dish) => (
-                    <CardDishes data={dish} />
-                  ))}
-              </div>
-            )}
-
-            <h2>Sobremesas</h2>
-            {dishes.filter((dish) => dish.category == "desserts").length >
-              0 && (
-              <div className="desserts">
-                {dishes
-                  .filter((dish) => dish.category == "desserts")
-                  .map((dish) => (
-                    <CardDishes data={dish} />
-                  ))}
-              </div>
-            )}
-            <h2>Bebidas</h2>
-            {dishes.filter((dish) => dish.category == "drinks").length > 0 && (
-              <div className="drinks">
-                {dishes
-                  .filter((dish) => dish.category == "drinks")
-                  .map((dish) => (
-                    <CardDishes data={dish} />
-                  ))}
-              </div>
-            )}
+          <section>
+            <FilterDish />
           </section>
         </Main>
         <Footer />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.aside`
@@ -29,6 +30,18 @@ export const Header = styled.header`
   padding: 2.8rem;
 `;
 
+export const Profile = styled(Link)`
+  display: flex;
+  align-items: center;
+
+  > img {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+`;
+
 export const Button = styled.button`
   background: none;
   border: none;
@@ -41,10 +54,6 @@ export const Button = styled.button`
     width: 1.8rem;
     height: 1.8rem;
   }
-`;
-
-export const Search = styled.div`
-  padding: 2.8rem;
 `;
 
 export const Nav = styled.nav`

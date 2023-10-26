@@ -9,6 +9,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Header } from "../../components/Header";
 import { api } from "../../services/api";
+import { MobileMenu } from "../../components/MobileMenu";
 
 export function EditDish() {
   const navigate = useNavigate();
@@ -24,6 +25,8 @@ export function EditDish() {
 
   const [ingredients, setIngredients] = useState([]);
   const [newIngredient, setNewIngredient] = useState("");
+
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   function handleChangeImage(event) {
     const file = event.target.files[0];
@@ -120,7 +123,11 @@ export function EditDish() {
 
   return (
     <Container>
-      <Header />
+      <MobileMenu
+        menuIsOpen={menuIsOpen}
+        onCloseMenu={() => setMenuIsOpen(false)}
+      />
+      <Header onOpenMenu={() => setMenuIsOpen(true)} />
       <Text>
         <Link to="/">
           <AiOutlineArrowLeft /> voltar
@@ -159,6 +166,7 @@ export function EditDish() {
           </select>
         </label>
         <div className="ingredients">
+          <label>Ingredientes</label>
           {ingredients.map((ingredient, index) => (
             <Ingredient
               key={String(index)}
@@ -166,7 +174,6 @@ export function EditDish() {
               onClick={() => handleRemoveIngredient(ingredient)}
             />
           ))}
-          <label>Ingredientes</label>
           <Ingredient
             isNew
             placeholder="Pão Naan"
@@ -180,6 +187,7 @@ export function EditDish() {
           <Input
             placeholder="R$00,00"
             type="number"
+            step="0.01"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />

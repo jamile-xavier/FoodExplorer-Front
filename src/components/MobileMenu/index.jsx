@@ -1,11 +1,13 @@
-import { Container, Header, Button, Search, Nav } from "./styles";
+import { Container, Header, Profile, Button, Nav } from "./styles";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
-import { Input } from "../Input";
+import { Search } from "../Search";
 import { Footer } from "../Footer";
 import { Link, useNavigate } from "react-router-dom";
 import { FiLogOut } from "react-icons/fi";
 import { USER_ROLE } from "../../utils/role";
 import { useAuth } from "../../hooks/auth";
+import { api } from "../../services/api";
+import avatarPlaceholder from "../../assets/avatarPlaceholder.jpg";
 
 export function MobileMenu({ menuIsOpen, onCloseMenu }) {
   const { user, signOut } = useAuth();
@@ -16,6 +18,10 @@ export function MobileMenu({ menuIsOpen, onCloseMenu }) {
     navigate("/");
     signOut();
   }
+
+  const avatarURL = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
 
   return (
     <Container data-menu-is-open={menuIsOpen}>
@@ -28,23 +34,21 @@ export function MobileMenu({ menuIsOpen, onCloseMenu }) {
         <h3>Menu</h3>
       </Header>
 
-      <Search>
-        <Input
-          placeholder="Busque por pratos ou ingredientes"
-          type="search"
-          icon={AiOutlineSearch}
-          onChange={(e) => {
-            search(e.target.value);
-          }}
-        />
-      </Search>
+      <label>
+        <Search />
+      </label>
+
       {[USER_ROLE.ADMIN, USER_ROLE.CUSTOMER].includes(user.role) && (
         <>
           {user.role === USER_ROLE.ADMIN && (
             <>
               <Nav>
                 <Link to="/addDish">Novo Prato</Link>
-                <Link to="/profile">Perfil</Link>
+                <Profile to="/profile">
+                  <img src={avatarURL} alt={user.name} />
+                  <span>Bem vindo (a) </span>
+                  <span>{user.name} </span>
+                </Profile>
               </Nav>
               <Button to="/" onClick={handleSignOut}>
                 Sair
@@ -56,7 +60,11 @@ export function MobileMenu({ menuIsOpen, onCloseMenu }) {
           {user.role === USER_ROLE.CUSTOMER && (
             <>
               <Nav>
-                <Link to="/profile">Perfil</Link>
+                <Profile to="/profile">
+                  <img src={avatarURL} alt={user.name} />
+                  <span>Bem vindo (a) </span>
+                  <span>{user.name} </span>
+                </Profile>
                 <Button to="/" onClick={handleSignOut}>
                   Sair
                   <FiLogOut size={40} />

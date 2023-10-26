@@ -4,7 +4,7 @@ import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
-
+import { MobileMenu } from "../../components/MobileMenu";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Header } from "../../components/Header";
 import { api } from "../../services/api";
@@ -22,6 +22,8 @@ export function AddDish() {
 
   const [ingredients, setIngredients] = useState([]);
   const [newIngredient, setNewIngredient] = useState("");
+
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   function handleAddIngredient() {
     setIngredients((prevState) => [...prevState, newIngredient]);
@@ -91,7 +93,12 @@ export function AddDish() {
 
   return (
     <Container>
-      <Header />
+      <MobileMenu
+        menuIsOpen={menuIsOpen}
+        onCloseMenu={() => setMenuIsOpen(false)}
+      />
+
+      <Header onOpenMenu={() => setMenuIsOpen(true)} />
       <Text>
         <Link to="/">
           <AiOutlineArrowLeft /> voltar
@@ -125,6 +132,7 @@ export function AddDish() {
           </select>
         </label>
         <div className="ingredients">
+          <label>Ingredientes</label>
           {ingredients.map((ingredient, index) => (
             <Ingredient
               key={String(index)}
@@ -132,7 +140,6 @@ export function AddDish() {
               onClick={() => handleRemoveIngredient(ingredient)}
             />
           ))}
-          <label>Ingredientes</label>
           <Ingredient
             isNew
             placeholder="Pão Naan"
@@ -146,6 +153,7 @@ export function AddDish() {
           <Input
             placeholder="R$00,00"
             type="number"
+            step="0.01"
             onChange={(e) => setPrice(e.target.value)}
           />
         </label>
