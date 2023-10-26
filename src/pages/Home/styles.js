@@ -24,3 +24,7 @@ export const Main = styled.div`
 export const Banner = styled.div`
   background-color: red;
 `;
+
+export const FixedContent = styled.div`
+  background-color: red;
+`;

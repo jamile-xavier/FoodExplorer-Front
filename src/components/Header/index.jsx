@@ -1,4 +1,4 @@
-import { Container, Nav, Profile, Logout } from "./styles";
+import { Container, Nav, Menu, Profile, Logout } from "./styles";
 import LogoAdm from "../../assets/LogoAdm.svg";
 import Logo from "../../assets/Logo.svg";
 import { FiLogOut } from "react-icons/fi";
@@ -15,7 +15,7 @@ import { api } from "../../services/api";
 import { useEffect, useState } from "react";
 import { Input } from "../Input";
 
-export function Header({ search }) {
+export function Header({ search, onOpenMenu }) {
   const { user, signOut } = useAuth();
 
   const navigate = useNavigate();
@@ -41,9 +41,9 @@ export function Header({ search }) {
             <>
               <Nav>
                 <div className="header_mobile">
-                  <a>
+                  <Menu onClick={onOpenMenu}>
                     <AiOutlineMenu size={40} />
-                  </a>
+                  </Menu>
                   <img src={LogoAdm} />
                 </div>
 
@@ -75,9 +75,9 @@ export function Header({ search }) {
             <>
               <Nav>
                 <div className="header_mobile">
-                  <a>
+                  <Menu onClick={onOpenMenu}>
                     <AiOutlineMenu size={40} />
-                  </a>
+                  </Menu>
                   <img src={Logo} />
                   <ButtonIcon icon={PiReceiptLight} />
                 </div>

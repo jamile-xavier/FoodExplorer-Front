@@ -66,6 +66,15 @@ export const Nav = styled.header`
   }
 `;
 
+export const Menu = styled.button`
+  border: none;
+  background: none;
+
+  > svg {
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+  }
+`;
+
 export const Profile = styled(Link)`
   > img {
     width: 5.6rem;
