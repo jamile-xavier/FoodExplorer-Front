@@ -16,6 +16,7 @@ export function EditDish() {
   const params = useParams();
   const [data, setData] = useState(null);
 
+  const imageURL = data && `${api.defaults.baseURL}/files/${data.image}`;
   const [image, setImage] = useState(null);
   const [imageFile, setImageFile] = useState(null);
   const [title, setTitle] = useState("");
@@ -47,36 +48,37 @@ export function EditDish() {
     );
   }
 
-  async function handleNewDish() {
-    if (!image) {
-      return alert("Insira uma imagem para o prato.");
+  async function handleRemoveDish() {
+    const isConfirm = confirm(
+      "Deseja realmente excluir esse prato do cardápio?"
+    );
+
+    if (isConfirm) {
+      await api.delete(`/dishes/${params.id}`);
+      alert("Prato removido do cardápio com sucesso!");
+      navigate("/");
+    }
+  }
+
+  useEffect(() => {
+    async function fetchDish() {
+      const response = await api.get(`/dishes/${params.id}`);
+      setData(response.data);
+
+      const { title, description, category, price, ingredients } =
+        response.data;
+      setTitle(title);
+      setDescription(description);
+      setCategory(category);
+      setPrice(price);
+      setIngredients(ingredients.map((ingredient) => ingredient.name));
+      setImage(image);
     }
 
-    if (!title) {
-      return alert("Digite um nome para o prato.");
-    }
+    fetchDish();
+  }, []);
 
-    if (!category) {
-      return alert("Adicione uma categoria ao prato.");
-    }
-
-    if (ingredients.length < 1) {
-      return alert("Adicione pelo menos um ingrediente ao prato.");
-    }
-
-    if (newIngredient) {
-      return alert(
-        "Você deixou um ingrediente no campo para adicionar. Clique em + para adicionar ou deixe o campo vazio."
-      );
-    }
-
-    if (!price) {
-      return alert("Informe o preço do prato.");
-    }
-
-    if (!description) {
-      return alert("Informe uma descrição do prato.");
-    }
+  async function handleEditDish() {
     const formData = new FormData();
     formData.append("image", imageFile);
     formData.append("title", title);
@@ -108,7 +110,7 @@ export function EditDish() {
       const response = await api.get(`/dishes/${params.id}`);
       setData(response.data);
 
-      const { title, description, category, price, ingredients, imageFile } =
+      const { title, description, category, price, ingredients } =
         response.data;
       setTitle(title);
       setDescription(description);
@@ -135,7 +137,7 @@ export function EditDish() {
         <h2>Editar prato</h2>
       </Text>
       <Form>
-        <img src={image} alt="Foto do prato" />
+        <img src={image ? image : imageURL} alt="Foto do prato" />
         <label>
           Imagem do prato
           <Input
@@ -196,13 +198,14 @@ export function EditDish() {
       <label>
         Descrição
         <Textarea
-          value={description}
+          placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
+          defaultValue={description}
           onChange={(e) => setDescription(e.target.value)}
         />
       </label>
       <Buttons>
         <ButtonText title="Excluir prato" onClick={handleRemoveDish} />
-        <ButtonText title="Salvar alterações" onClick={handleNewDish} />
+        <ButtonText title="Salvar alterações" onClick={handleEditDish} />
       </Buttons>
       <Footer />
     </Container>
