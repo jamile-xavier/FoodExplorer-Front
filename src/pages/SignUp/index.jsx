@@ -1,5 +1,5 @@
 // Styles
-import { Container, TextLogin, Form } from "./styles.js";
+import { Container, TextLogin, Form, Acc } from "./styles.js";
 
 // Components
 import Logo from "../../assets/Logo.svg";
@@ -9,7 +9,7 @@ import { Input } from "../../components/Input/index.jsx";
 // API and others
 import { useState } from "react";
 import { api } from "../../services/api.js";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function SignUp() {
   //useState
@@ -48,34 +48,33 @@ export function SignUp() {
         <TextLogin>
           <h1>Crie sua conta</h1>
         </TextLogin>
-        <label>
-          Seu nome
-          <Input
-            placeholder="Exemplo: Maria da Silva"
-            type="text"
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
-        <label>
-          Email
-          <Input
-            placeholder="Exemplo: exemplo@exemplo.com.br"
-            type="text"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <label>
-          Senha
-          <Input
-            placeholder="No mínimo 6 caracteres"
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
+        <label htmlFor="nome">Nome</label>
+        <Input
+          placeholder="Exemplo: Maria da Silva"
+          type="text"
+          onChange={(e) => setName(e.target.value)}
+          id="nome"
+        />
+
+        <label htmlFor="email">Email</label>
+        <Input
+          placeholder="Exemplo: exemplo@exemplo.com.br"
+          type="text"
+          onChange={(e) => setEmail(e.target.value)}
+          id="email"
+        />
+
+        <label htmlFor="senha">Senha</label>
+        <Input
+          placeholder="No mínimo 6 caracteres"
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+          id="senha"
+        />
 
         <ButtonText title={"Criar conta"} onClick={handleSignUp} />
 
-        <Link to="/">Já tenho uma conta</Link>
+        <Acc to="/">Já tenho uma conta</Acc>
       </Form>
     </Container>
   );

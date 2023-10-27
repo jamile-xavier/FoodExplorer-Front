@@ -6,6 +6,7 @@ export function Search({ icon: Icon, ...rest }) {
   return (
     <Container>
       <Input
+        type="text"
         placeholder="Busque por pratos ou ingredientes"
         icon={AiOutlineSearch}
       />

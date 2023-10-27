@@ -8,6 +8,7 @@ import bannerImage from "../../assets/banner.png";
 import { MobileMenu } from "../../components/MobileMenu";
 
 import { FilterDish } from "../../components/FilterDish";
+import { api } from "../../services/api";
 
 export function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);

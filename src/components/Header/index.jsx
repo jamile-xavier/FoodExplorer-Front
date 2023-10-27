@@ -15,7 +15,7 @@ import { api } from "../../services/api";
 import { useEffect, useState } from "react";
 import { Search } from "../Search";
 
-export function Header({ search, onOpenMenu }) {
+export function Header({ onOpenMenu }) {
   const { user, signOut } = useAuth();
 
   const navigate = useNavigate();
@@ -28,6 +28,18 @@ export function Header({ search, onOpenMenu }) {
   function handleAddDish() {
     navigate("/addDish");
   }
+
+  const [dishes, setDishes] = useState([]);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    async function fetchDishes() {
+      const response = await api.get(`/dishes?title=${search}`);
+      setDishes(response.data);
+    }
+    fetchDishes();
+  }, [search]);
+
   return (
     <Container>
       {[USER_ROLE.ADMIN, USER_ROLE.CUSTOMER].includes(user.role) && (
@@ -45,7 +57,7 @@ export function Header({ search, onOpenMenu }) {
                 <div className="header_desktop">
                   <img src={LogoAdm} />
                   <label>
-                    <Search />
+                    <Search onChange={(e) => setSearch(e.target.value)} />
                   </label>
                   <ButtonText title="Novo Prato" onClick={handleAddDish} />
                   <Profile to="/profile">

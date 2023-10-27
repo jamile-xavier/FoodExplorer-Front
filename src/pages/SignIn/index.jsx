@@ -1,5 +1,5 @@
 //styles
-import { Container, Form, TextLogin } from "./styles.js";
+import { Container, Form, TextLogin, NewAcc } from "./styles.js";
 
 // Components
 import Logo from "../../assets/Logo.svg";
@@ -8,7 +8,7 @@ import { ButtonText } from "../../components/ButtonText/index.jsx";
 
 // API and others
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 import { useAuth } from "../../hooks/auth";
 
 export function SignIn() {
@@ -30,25 +30,24 @@ export function SignIn() {
         <TextLogin>
           <h1>Faça login</h1>
         </TextLogin>
-        <label>
-          Email
-          <Input
-            placeholder="Exemplo: exemplo@exemplo.com.br"
-            type="text"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <label>
-          Senha
-          <Input
-            placeholder="No mínimo 6 caracteres"
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
+        <label htmlFor="email">Email</label>
+        <Input
+          placeholder="Exemplo: exemplo@exemplo.com.br"
+          type="text"
+          onChange={(e) => setEmail(e.target.value)}
+          id="email"
+        />
+
+        <label htmlFor="senha">Senha</label>
+        <Input
+          placeholder="No mínimo 6 caracteres"
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+          id="senha"
+        />
         <ButtonText title="Entrar" onClick={handleSignIn} />
 
-        <Link to="/register">Criar uma conta</Link>
+        <NewAcc to="/register">Criar uma conta</NewAcc>
       </Form>
     </Container>
   );
