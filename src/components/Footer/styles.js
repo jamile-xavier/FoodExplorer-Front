@@ -13,7 +13,7 @@ export const Container = styled.div`
   margin-top: 2.4rem;
 
   > img {
-    width: 14.2rem;
+    width: 50%;
   }
 
   @media (min-width: 1024px) {

@@ -18,6 +18,7 @@ export const Container = styled.div`
 
 export const Main = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 1.6rem;
 `;
 

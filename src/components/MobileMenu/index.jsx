@@ -1,4 +1,4 @@
-import { Container, Header, Profile, Button, Nav } from "./styles";
+import { Container, Header, Profile, Button, Nav, AddDish } from "./styles";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 import { Search } from "../Search";
 import { Footer } from "../Footer";
@@ -34,26 +34,25 @@ export function MobileMenu({ menuIsOpen, onCloseMenu }) {
         <h3>Menu</h3>
       </Header>
 
-      <label>
-        <Search />
+      <label htmlFor="search">
+        <Search id="search" />
       </label>
-
       {[USER_ROLE.ADMIN, USER_ROLE.CUSTOMER].includes(user.role) && (
         <>
           {user.role === USER_ROLE.ADMIN && (
             <>
               <Nav>
-                <Link to="/addDish">Novo Prato</Link>
+                <AddDish to="/addDish">Novo Prato</AddDish>
                 <Profile to="/profile">
                   <img src={avatarURL} alt={user.name} />
                   <span>Bem vindo (a) </span>
                   <span>{user.name} </span>
                 </Profile>
+                <Button to="/" onClick={handleSignOut}>
+                  Sair
+                  <FiLogOut size={40} />
+                </Button>
               </Nav>
-              <Button to="/" onClick={handleSignOut}>
-                Sair
-                <FiLogOut size={40} />
-              </Button>
               <Footer />
             </>
           )}
@@ -70,6 +69,7 @@ export function MobileMenu({ menuIsOpen, onCloseMenu }) {
                   <FiLogOut size={40} />
                 </Button>
               </Nav>
+
               <Footer />
             </>
           )}

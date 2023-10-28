@@ -28,6 +28,10 @@ export const Container = styled.div`
     }
   }
 
+  > svg {
+    margin-left: 2rem;
+  }
+
   @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
     margin-bottom: 2rem;
 

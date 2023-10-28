@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.aside`
   background: ${({ theme }) => theme.COLORS.DARK_400};
   width: 100%;
   height: 100vh;
-
+  font-size: 1.2rem;
   display: none;
 
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
@@ -21,24 +22,19 @@ export const Container = styled.aside`
     flex-direction: column;
     transform: translateX(0);
   }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.SM}) {
+    margin: 2rem;
+  }
 `;
 
 export const Header = styled.header`
   background: ${({ theme }) => theme.COLORS.DARK_700};
   display: flex;
-  gap: 1.6rem;
-  padding: 2.8rem;
-`;
-
-export const Profile = styled(Link)`
-  display: flex;
   align-items: center;
 
-  > img {
-    width: 5.6rem;
-    height: 5.6rem;
-    border-radius: 50%;
-    margin-right: 2rem;
+  > h3 {
+    font-size: 1.2rem;
   }
 `;
 
@@ -48,6 +44,8 @@ export const Button = styled.button`
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
   display: flex;
   gap: 1rem;
+  padding: 1rem;
+  margin: 2.8rem;
 
   > svg {
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
@@ -60,8 +58,30 @@ export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   height: 100vh;
+`;
 
-  > a {
+export const AddDish = styled(Link)`
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
+  padding: 1rem;
+  margin: 2.8rem;
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK_1000};
+`;
+
+export const Profile = styled(Link)`
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin: 0 2.8rem;
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK_1000};
+
+  > img {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  > span {
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
   }
 `;

@@ -5,6 +5,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.DARK_600};
   width: 100%;
   display: flex;
+  font-size: 1.2rem;
 `;
 
 export const Nav = styled.header`
@@ -54,7 +55,7 @@ export const Nav = styled.header`
         padding: 1.6rem 3rem;
         width: 100%;
         height: 4.8rem;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         border: none;
         border-radius: 0.5rem;
       }
