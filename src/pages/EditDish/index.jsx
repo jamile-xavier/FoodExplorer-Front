@@ -1,4 +1,4 @@
-import { Container, Text, Form, Buttons } from "./style";
+import { Container, Text, Form, Buttons } from "./styles";
 import { Ingredient } from "../../components/Ingredient";
 import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";

@@ -1,27 +1,40 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
   width: 100%;
+  padding: 2rem;
 
   > header {
     width: 100%;
-    height: 20rem;
+    height: 10rem;
 
     background: ${({ theme }) => theme.COLORS.DARK_100};
 
     display: flex;
-    align-items: center;
-    padding: 0 12rem;
+    justify-content: flex-end;
 
-    svg {
+    /* svg {
       color: ${({ theme }) => theme.COLORS.LIGHT_100};
       font-size: 4rem;
     }
 
-    button {
+    /* button {
       background: none;
       border: none;
-    }
+    }*/
+  }
+`;
+
+export const ButtonBack = styled.button`
+  display: flex;
+  justify-content: center;
+  background: none;
+  border: none;
+
+  svg {
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+    font-size: 4rem;
   }
 `;
 
@@ -35,20 +48,22 @@ export const Form = styled.form`
 
 export const Avatar = styled.form`
   position: relative;
-  margin: -12.4rem auto 3.2rem;
+  display: flex;
+  justify-content: center;
+  margin: -3.4rem auto;
   width: 18.6rem;
   height: 18.6rem;
 
   > img {
     border-radius: 50%;
 
-    width: 18.6rem;
-    height: 18.6rem;
+    width: 10rem;
+    height: 10rem;
   }
 
   > label {
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 3.8rem;
+    height: 3.8rem;
     background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
     border-radius: 50%;
 
@@ -57,8 +72,8 @@ export const Avatar = styled.form`
     justify-content: center;
 
     position: absolute;
-    bottom: 7px;
-    right: 7px;
+    bottom: 7.2rem;
+    right: 3.8rem;
     cursor: pointer;
 
     input {
@@ -69,6 +84,22 @@ export const Avatar = styled.form`
       width: 20px;
       height: 20px;
       color: ${({ theme }) => theme.COLORS.LIGHT_100};
+    }
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+    margin: -1.4rem auto;
+
+    > img {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    > label {
+      width: 4.8rem;
+      height: 4.8rem;
+      bottom: 3.2rem;
+      right: 0.8rem;
     }
   }
 `;

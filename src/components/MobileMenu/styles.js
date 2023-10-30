@@ -22,10 +22,6 @@ export const Container = styled.aside`
     flex-direction: column;
     transform: translateX(0);
   }
-
-  @media (min-width: ${DEVICE_BREAKPOINTS.SM}) {
-    margin: 2rem;
-  }
 `;
 
 export const Header = styled.header`

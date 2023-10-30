@@ -57,7 +57,7 @@ export const Form = styled.form`
   width: 100%;
   margin: 2rem 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     background-color: ${({ theme }) => theme.COLORS.DARK_700};
     padding: 6.4rem;
     border-radius: 1.6rem;

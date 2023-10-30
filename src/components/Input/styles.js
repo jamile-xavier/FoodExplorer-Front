@@ -33,18 +33,18 @@ export const Container = styled.div`
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
-    margin-bottom: 2rem;
-
     > input {
       padding: 2.5rem 1.4rem;
       font-size: 1.4rem;
     }
   }
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-    margin-bottom: 2rem;
-
     > input {
       font-size: 1.6rem;
+    }
+    > svg {
+      width: 2.4rem;
+      height: 2.4rem;
     }
   }
 `;

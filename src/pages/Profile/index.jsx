@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Container, Form, Avatar } from "./styles";
+import { Container, ButtonBack, Form, Avatar } from "./styles";
 import { Input } from "../../components/Input";
 import { useAuth } from "../../hooks/auth";
 import { ButtonText } from "../../components/ButtonText";
 import avatarPlaceholder from "../../assets/avatarPlaceholder.jpg";
 import { api } from "../../services/api";
 import { AiOutlineRollback, AiOutlineCamera } from "react-icons/ai";
+import { ButtonIcon } from "../../components/ButtonIcon";
 
 export function Profile() {
   const { user, updateProfile } = useAuth();
@@ -52,9 +53,9 @@ export function Profile() {
   return (
     <Container>
       <header>
-        <button type="button" onClick={handleBack}>
+        <ButtonBack onClick={handleBack}>
           <AiOutlineRollback />
-        </button>
+        </ButtonBack>
       </header>
       <Form>
         <Avatar>

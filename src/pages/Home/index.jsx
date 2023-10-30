@@ -19,26 +19,24 @@ export function Home() {
         menuIsOpen={menuIsOpen}
         onCloseMenu={() => setMenuIsOpen(false)}
       />
-      <FixedContent>
-        <Header onOpenMenu={() => setMenuIsOpen(true)} />
-        <Main>
-          <section className="banner">
-            <Banner>
-              <img src={bannerImage} alt="banner contendo vários macarons" />
-              <div className="banner_title">
-                <h1>Sabores inigualáveis</h1>
-                <span>
-                  Sinta o cuidado do preparo com ingredientes selecionados
-                </span>
-              </div>
-            </Banner>
-          </section>
-          <section>
-            <FilterDish />
-          </section>
-        </Main>
-        <Footer />
-      </FixedContent>
+      <Header onOpenMenu={() => setMenuIsOpen(true)} />
+      <Main>
+        <section className="banner">
+          <Banner>
+            <img src={bannerImage} alt="banner contendo vários macarons" />
+            <div className="banner_title">
+              <h1>Sabores inigualáveis</h1>
+              <span>
+                Sinta o cuidado do preparo com ingredientes selecionados
+              </span>
+            </div>
+          </Banner>
+        </section>
+        <section className="dishes">
+          <FilterDish />
+        </section>
+      </Main>
+      <Footer />
     </Container>
   );
 }

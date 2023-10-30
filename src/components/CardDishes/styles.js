@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
   width: 21rem;
@@ -12,7 +13,13 @@ export const Container = styled.div`
   gap: 1.2rem;
 
   > a {
-    font-size: 1.4rem;
+    > h3 {
+      font-size: 1.2rem;
+    }
+    > svg {
+      width: 2.4rem;
+      margin-left: 10rem;
+    }
   }
 
   > img {
@@ -24,7 +31,7 @@ export const Container = styled.div`
   }
 
   > h2 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: ${({ theme }) => theme.COLORS.CAKE_200};
   }
 
@@ -34,21 +41,46 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+    > a {
+      > h3 {
+        font-size: 1.4rem;
+      }
+      > svg {
+        width: 3.4rem;
+      }
+    }
+
+    > img {
+      width: 12.8rem;
+    }
+
+    > h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     width: 30.4rem;
     height: 40rem;
 
     > a {
-      font-size: 2.4rem;
+      > h3 {
+        font-size: 2.4rem;
+      }
+      > svg {
+        width: 3.4rem;
+        margin-left: 15rem;
+      }
     }
 
     > img {
-      width: 8.8rem;
+      width: 17.6rem;
     }
 
     > p {
       display: flex;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
     }
 

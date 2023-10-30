@@ -25,5 +25,6 @@ export default {
     MINT_100: "#04D361",
     CAKE_100: "#065E7C",
     CAKE_200: "#82F3FF",
+    GRADIENT_200: "linear-gradient(180deg, #091e26 0%, #00131c 100%)",
   },
 };

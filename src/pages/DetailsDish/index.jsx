@@ -7,7 +7,7 @@ import {
   Left,
   Right,
   PlateDescription,
-} from "./style";
+} from "./styles";
 
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { PiReceiptLight } from "react-icons/pi";
