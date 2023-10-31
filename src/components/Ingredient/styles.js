@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
   display: flex;
@@ -34,8 +35,12 @@ export const Container = styled.div`
     background: transparent;
     border: none;
 
-    &::placeholder {
-      color: ${({ theme }) => theme.COLORS.LIGHT_500};
+    &:placeholder {
+      color: ${({ theme }) => theme.COLORS.DARK_500};
     }
   }
+
+  /* @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    flex-direction: row;
+  }*/
 `;

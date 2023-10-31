@@ -3,7 +3,6 @@ import {
   Container,
   Content,
   IngredientsTags,
-  Side,
   Left,
   Right,
   PlateDescription,

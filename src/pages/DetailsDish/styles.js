@@ -1,13 +1,25 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
-  margin: 1.6rem 5.6rem;
   text-align: center;
+  font-size: 1.2rem;
+  height: 100vh;
+  width: 100%;
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+    font-size: 1.4rem;
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Content = styled.div`
   margin: 1.6rem 5.6rem;
   text-align: center;
+  height: 100vh;
 `;
 
 export const IngredientsTags = styled.div`
@@ -18,54 +30,40 @@ export const IngredientsTags = styled.div`
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
 `;
 
-export const Side = styled.div`
-  display: flex;
-  gap: 1.6rem;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 4.8rem;
-
-  > button {
-    width: 50%;
-  }
-
-  @media (min-width: 1024px) {
-    display: none;
-  }
-`;
-
 export const PlateDescription = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 1024px) {
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     flex-direction: row;
     justify-content: space-between;
+    gap: 10rem;
+    max-width: 120rem;
+    margin: 0 auto;
   }
 `;
 
 export const Right = styled.div`
-  > h2 {
-    font-size: 2.7rem;
-    margin-bottom: 2.4rem;
+  > h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
   }
 
   > p {
-    font-size: 1.6rem;
     color: ${({ theme }) => theme.COLORS.LIGHT_300};
-  }
-  > button {
-    display: none;
+    margin-bottom: 1.8rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    > button {
-      display: flex;
-      width: 13.1rem;
-      margin-top: 4.8rem;
+    > h1 {
+      font-size: 4rem;
+    }
+
+    > p {
+      font-size: 2.4rem;
     }
   }
 `;
@@ -78,12 +76,16 @@ export const Left = styled.div`
   }
 
   > img {
-    width: 26.4rem;
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem auto;
   }
 
-  @media (min-width: 1024px) {
-    > a {
-      margin-bottom: 4.2rem;
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    > img {
+      width: 40rem;
+      height: 40rem;
+      margin: 6rem auto;
     }
   }
 `;
