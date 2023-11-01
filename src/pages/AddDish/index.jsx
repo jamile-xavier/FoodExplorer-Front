@@ -137,21 +137,23 @@ export function AddDish() {
           </div>
           <div className="ingredients">
             <label htmlFor="ingredients">Ingredientes</label>
-            {ingredients.map((ingredient, index) => (
+            <div className="ingredient">
+              {ingredients.map((ingredient, index) => (
+                <Ingredient
+                  key={String(index)}
+                  value={ingredient}
+                  onClick={() => handleRemoveIngredient(ingredient)}
+                />
+              ))}
               <Ingredient
-                key={String(index)}
-                value={ingredient}
-                onClick={() => handleRemoveIngredient(ingredient)}
+                isNew
+                placeholder="Adicionar"
+                value={newIngredient}
+                onChange={(e) => setNewIngredient(e.target.value)}
+                onClick={handleAddIngredient}
+                id="ingredients"
               />
-            ))}
-            <Ingredient
-              isNew
-              placeholder="Adicionar"
-              value={newIngredient}
-              onChange={(e) => setNewIngredient(e.target.value)}
-              onClick={handleAddIngredient}
-              id="ingredients"
-            />
+            </div>
           </div>
           <div className="price">
             <label htmlFor="price"> Preço </label>

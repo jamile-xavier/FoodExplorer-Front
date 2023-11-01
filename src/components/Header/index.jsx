@@ -3,7 +3,7 @@ import LogoAdm from "../../assets/LogoAdm.svg";
 import Logo from "../../assets/Logo.svg";
 import { FiLogOut } from "react-icons/fi";
 import { PiReceiptLight, PiUserCircleThin } from "react-icons/pi";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { ButtonText } from "../ButtonText";
 import { ButtonIcon } from "../ButtonIcon";
 import { Link } from "react-router-dom";
@@ -13,9 +13,9 @@ import { useNavigate } from "react-router-dom";
 import avatarPlaceholder from "../../assets/avatarPlaceholder.jpg";
 import { api } from "../../services/api";
 import { useEffect, useState } from "react";
-import { Search } from "../Search";
+import { Input } from "../Input";
 
-export function Header({ onOpenMenu }) {
+export function Header({ onOpenMenu, search }) {
   const { user, signOut } = useAuth();
 
   const navigate = useNavigate();
@@ -28,17 +28,6 @@ export function Header({ onOpenMenu }) {
   function handleAddDish() {
     navigate("/addDish");
   }
-
-  const [dishes, setDishes] = useState([]);
-  const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    async function fetchDishes() {
-      const response = await api.get(`/dishes?title=${search}`);
-      setDishes(response.data);
-    }
-    fetchDishes();
-  }, [search]);
 
   return (
     <Container>
@@ -57,7 +46,13 @@ export function Header({ onOpenMenu }) {
                 <div className="header_desktop">
                   <img src={LogoAdm} />
                   <label>
-                    <Search onChange={(e) => setSearch(e.target.value)} />
+                    <Input
+                      icon={AiOutlineSearch}
+                      placeholder="Busque por pratos ou ingredientes"
+                      onChange={(e) => {
+                        search(e.target.value);
+                      }}
+                    />
                   </label>
                   <ButtonText title="Novo Prato" onClick={handleAddDish} />
                   <Profile to="/profile">
@@ -85,7 +80,11 @@ export function Header({ onOpenMenu }) {
                 <div className="header_desktop">
                   <img src={Logo} />
                   <label>
-                    <Search />
+                    <Search
+                      onChange={(e) => {
+                        search(e.target.value);
+                      }}
+                    />
                   </label>
                   <ButtonIcon icon={PiReceiptLight} title="Pedidos" qtde="0" />
                   <Profile to="/profile">

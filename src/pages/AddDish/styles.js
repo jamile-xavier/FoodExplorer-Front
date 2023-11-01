@@ -38,6 +38,25 @@ export const Form = styled.form`
     }
   }
 
+  .ingredients {
+    display: flex;
+    flex-direction: column;
+
+    .ingredient {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+
+      width: 100%;
+      height: auto;
+      padding: 0.4rem;
+
+      border-radius: 0.8rem;
+
+      background-color: ${({ theme }) => theme.COLORS.DARK_900};
+    }
+  }
+
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     display: grid;
     grid-template-areas:

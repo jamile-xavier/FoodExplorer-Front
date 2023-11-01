@@ -3,7 +3,7 @@ import { AiOutlinePlus, AiOutlineClose } from "react-icons/ai";
 
 export function Ingredient({ isNew, value, onClick, ...rest }) {
   return (
-    <Container isnew={isNew}>
+    <Container isNew={isNew}>
       <input type="text" value={value} readOnly={!isNew} {...rest} />
 
       <button

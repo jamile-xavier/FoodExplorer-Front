@@ -145,7 +145,7 @@ export function EditDish() {
               <Input
                 placeholder="Selecione a imagem"
                 type="file"
-                onChange={(e) => setImage(e.target.files[0])}
+                onChange={handleChangeImage}
                 id="image"
               />
             </label>
@@ -155,6 +155,7 @@ export function EditDish() {
             <Input
               placeholder="Ex.: Salada Ceasar"
               type="text"
+              value={title}
               onChange={(e) => setTitle(e.target.value)}
               id="name"
             />
@@ -162,7 +163,11 @@ export function EditDish() {
           <div className="category">
             <label htmlFor="category"> Categoria </label>
 
-            <select onChange={(e) => setCategory(e.target.value)} id="category">
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              id="category"
+            >
               <option value="default">Selecione uma categoria</option>
               <option value="meals">Refeições</option>
               <option value="desserts">Sobremesas</option>
@@ -171,21 +176,23 @@ export function EditDish() {
           </div>
           <div className="ingredients">
             <label htmlFor="ingredients">Ingredientes</label>
-            {ingredients.map((ingredient, index) => (
+            <div className="ingredient">
+              {ingredients.map((ingredient, index) => (
+                <Ingredient
+                  key={String(index)}
+                  value={ingredient}
+                  onClick={() => handleRemoveIngredient(ingredient)}
+                />
+              ))}
               <Ingredient
-                key={String(index)}
-                value={ingredient}
-                onClick={() => handleRemoveIngredient(ingredient)}
+                isNew
+                placeholder="Adicionar"
+                value={newIngredient}
+                onChange={(e) => setNewIngredient(e.target.value)}
+                onClick={handleAddIngredient}
+                id="ingredients"
               />
-            ))}
-            <Ingredient
-              isNew
-              placeholder="Adicionar"
-              value={newIngredient}
-              onChange={(e) => setNewIngredient(e.target.value)}
-              onClick={handleAddIngredient}
-              id="ingredients"
-            />
+            </div>
           </div>
           <div className="price">
             <label htmlFor="price"> Preço </label>
@@ -193,6 +200,7 @@ export function EditDish() {
               placeholder="R$00,00"
               type="number"
               step="0.01"
+              value={price}
               onChange={(e) => setPrice(e.target.value)}
               id="price"
             />
@@ -202,6 +210,7 @@ export function EditDish() {
 
             <Textarea
               placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
+              defaultValue={description}
               onChange={(e) => setDescription(e.target.value)}
               id="description"
             />

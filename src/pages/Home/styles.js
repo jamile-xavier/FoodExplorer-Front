@@ -31,7 +31,7 @@ export const Main = styled.div`
   gap: 1.6rem;
 `;
 
-export const Banner = styled.div`
+export const Banner = styled.section`
   display: flex;
   align-items: center;
   background: ${({ theme }) => theme.COLORS.GRADIENT_200};
@@ -79,4 +79,10 @@ export const Banner = styled.div`
   }
 `;
 
-export const FixedContent = styled.div``;
+export const Dishes = styled.div`
+  .dishes,
+  .desserts,
+  .drinks {
+    display: flex;
+  }
+`;
