@@ -4,7 +4,7 @@ import { SignIn } from "../pages/SignIn";
 import { SignUp } from "../pages/SignUp";
 
 export function AuthRoutes() {
-  const user = localStorage.getItem("@foodexplorer: user");
+  const user = localStorage.getItem("@foodexplorer:user");
   return (
     <Routes>
       <Route path="/" element={<SignIn />} />

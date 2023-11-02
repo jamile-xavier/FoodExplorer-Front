@@ -1,6 +1,6 @@
 import { Container, Header, Profile, Button, Nav, AddDish } from "./styles";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
-import { Search } from "../Search";
+import { Input } from "../Input";
 import { Footer } from "../Footer";
 import { Link, useNavigate } from "react-router-dom";
 import { FiLogOut } from "react-icons/fi";
@@ -33,9 +33,14 @@ export function MobileMenu({ menuIsOpen, onCloseMenu }) {
         )}
         <h3>Menu</h3>
       </Header>
-
-      <label htmlFor="search">
-        <Search id="search" />
+      <label>
+        <Input
+          icon={AiOutlineSearch}
+          placeholder="Busque por pratos ou ingredientes"
+          onChange={(e) => {
+            search(e.target.value);
+          }}
+        />
       </label>
       {[USER_ROLE.ADMIN, USER_ROLE.CUSTOMER].includes(user.role) && (
         <>

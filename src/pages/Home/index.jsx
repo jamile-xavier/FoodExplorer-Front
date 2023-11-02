@@ -12,6 +12,9 @@ import { CardDishes } from "../../components/CardDishes";
 import { api } from "../../services/api";
 import { Section } from "../../components/Section";
 
+import { Carousel } from "../../components/Carousel";
+import { SwiperSlide } from "swiper/react";
+
 export function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [dishes, setDishes] = useState([]);
@@ -25,6 +28,17 @@ export function Home() {
 
     fetchDishes();
   }, [search]);
+
+  const paramsCarousel = {
+    breakpoints: {
+      425: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+    },
+  };
 
   return (
     <Container>
@@ -43,37 +57,50 @@ export function Home() {
             </span>
           </div>
         </Banner>
+
         <Dishes>
-          <Section title="Refeições" />
           {dishes.filter((dish) => dish.category == "meals").length > 0 && (
-            <div className="dishes">
-              {dishes
-                .filter((dish) => dish.category == "meals")
-                .map((dish) => (
-                  <CardDishes data={dish} />
-                ))}
-            </div>
+            <>
+              <Section title="Refeições" />
+              <Carousel params={paramsCarousel}>
+                {dishes
+                  .filter((dish) => dish.category == "meals")
+                  .map((dish) => (
+                    <SwiperSlide key={String(dish.id)}>
+                      <CardDishes data={dish} />
+                    </SwiperSlide>
+                  ))}
+              </Carousel>
+            </>
           )}
 
-          <Section title="Sobremesas" />
           {dishes.filter((dish) => dish.category == "desserts").length > 0 && (
-            <div className="desserts">
-              {dishes
-                .filter((dish) => dish.category == "desserts")
-                .map((dish) => (
-                  <CardDishes data={dish} />
-                ))}
-            </div>
+            <>
+              <Section title="Sobremesas" />
+              <Carousel params={paramsCarousel}>
+                {dishes
+                  .filter((dish) => dish.category == "desserts")
+                  .map((dish) => (
+                    <SwiperSlide key={String(dish.id)}>
+                      <CardDishes data={dish} />
+                    </SwiperSlide>
+                  ))}
+              </Carousel>
+            </>
           )}
-          <Section title="Bebidas" />
           {dishes.filter((dish) => dish.category == "drinks").length > 0 && (
-            <div className="drinks">
-              {dishes
-                .filter((dish) => dish.category == "drinks")
-                .map((dish) => (
-                  <CardDishes data={dish} />
-                ))}
-            </div>
+            <>
+              <Section title="Bebidas" />
+              <Carousel params={paramsCarousel}>
+                {dishes
+                  .filter((dish) => dish.category == "drinks")
+                  .map((dish) => (
+                    <SwiperSlide key={String(dish.id)}>
+                      <CardDishes data={dish} />
+                    </SwiperSlide>
+                  ))}
+              </Carousel>
+            </>
           )}
         </Dishes>
       </Main>
