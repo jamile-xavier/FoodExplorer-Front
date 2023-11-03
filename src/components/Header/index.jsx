@@ -80,7 +80,9 @@ export function Header({ onOpenMenu, search }) {
                 <div className="header_desktop">
                   <img src={Logo} />
                   <label>
-                    <Search
+                    <Input
+                      icon={AiOutlineSearch}
+                      placeholder="Busque por pratos ou ingredientes"
                       onChange={(e) => {
                         search(e.target.value);
                       }}

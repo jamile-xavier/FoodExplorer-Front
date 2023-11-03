@@ -14,25 +14,33 @@ import "swiper/css/a11y";
 
 import { Container } from "./styles";
 
-import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
-
 export function Carousel({ children, params }) {
   return (
-    <Container>
-      <Swiper
-        keyboard={{ enabled: true }}
-        navigation={true}
-        pagination={{ clickable: true }}
-        a11y={{
-          prevSlideMessage: "Previous slide",
-          nextSlideMessage: "Next slide",
-        }}
-        modules={[Navigation, Pagination, Keyboard]}
-        {...params}
-        className="myCarousel"
-      >
-        {children}
-      </Swiper>
-    </Container>
+    <>
+      <Container>
+        <Swiper
+          loop={true}
+          keyboard={{ enabled: true }}
+          navigation={true}
+          pagination={{ clickable: true }}
+          a11y={{
+            prevSlideMessage: "Previous slide",
+            nextSlideMessage: "Next slide",
+          }}
+          modules={[Navigation, Pagination, Keyboard]}
+          {...params}
+          className="myCarousel"
+        >
+          {children}
+        </Swiper>
+      </Container>
+      <style jsx="true">
+        {`
+          .swiper-pagination-bullet {
+            background: #ab4d55;
+          }
+        `}
+      </style>
+    </>
   );
 }

@@ -1,11 +1,16 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.section`
-  margin: 2.8rem 0;
+  margin: 0.8rem 0;
 
   > h2 {
-    padding-bottom: 1.6rem;
-    margin-bottom: 2.4rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    > h2 {
+      font-size: 3.2rem;
+    }
   }
 `;

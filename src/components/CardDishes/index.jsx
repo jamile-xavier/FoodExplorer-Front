@@ -1,4 +1,4 @@
-import { Container, Side } from "./styles";
+import { Container, EditDish, DetailsDish, Side } from "./styles";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { PiPencilSimpleDuotone } from "react-icons/pi";
 import { IoIosArrowForward } from "react-icons/io";
@@ -24,15 +24,15 @@ export function CardDishes({ data, ...rest }) {
         <>
           {user.role === USER_ROLE.ADMIN && (
             <>
-              <Link to={`editDish/${data.id} `} className="EditDish">
+              <EditDish to={`editDish/${data.id} `} className="EditDish">
                 <PiPencilSimpleDuotone size={40} />
-              </Link>
+              </EditDish>
               <img src={imageURL} alt={data.title} />
-              <Link to={`/detailsDish/${data.id}`}>
+              <DetailsDish to={`/detailsDish/${data.id}`}>
                 <h3>
                   {data.title} <IoIosArrowForward />
                 </h3>
-              </Link>
+              </DetailsDish>
               <p>{data.description}</p>
               <h2>R$ {data.price}</h2>
             </>

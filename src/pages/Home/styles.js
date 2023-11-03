@@ -80,9 +80,9 @@ export const Banner = styled.section`
 `;
 
 export const Dishes = styled.div`
-  .dishes,
+  /*  .dishes,
   .desserts,
   .drinks {
     display: flex;
-  }
+  }*/
 `;
