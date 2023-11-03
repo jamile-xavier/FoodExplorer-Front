@@ -4,31 +4,20 @@ import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 export const Container = styled.div`
   width: 100%;
   padding: 2rem;
+  max-width: 60rem;
+  margin: 0 auto;
 
-  > header {
-    width: 100%;
-    height: 10rem;
-
-    background: ${({ theme }) => theme.COLORS.DARK_100};
-
-    display: flex;
-    justify-content: flex-end;
-
-    /* svg {
-      color: ${({ theme }) => theme.COLORS.LIGHT_100};
-      font-size: 4rem;
-    }
-
-    /* button {
-      background: none;
-      border: none;
-    }*/
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    max-width: 120rem;
+    margin: 0 auto;
   }
 `;
 
 export const ButtonBack = styled.button`
+  width: 100%;
+  height: 10rem;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   background: none;
   border: none;
 
@@ -39,10 +28,16 @@ export const ButtonBack = styled.button`
 `;
 
 export const Form = styled.form`
-  max-width: 40rem;
-  margin: 2rem auto 0;
+  margin: 4rem auto 0;
   > div:nth-child(4) {
     margin-top: 2.4rem;
+  }
+
+  > button {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 3rem;
+    align-items: center;
   }
 `;
 

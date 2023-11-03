@@ -3,7 +3,7 @@ import { Container } from "./styles";
 export function ButtonIcon({ title, icon: Icon, qtde }) {
   return (
     <Container type="button">
-      {Icon && <Icon size={40} />}
+      {Icon && <Icon />}
       {title}
       {qtde}
     </Container>

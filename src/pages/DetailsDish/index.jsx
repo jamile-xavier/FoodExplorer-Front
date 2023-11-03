@@ -4,6 +4,7 @@ import {
   Content,
   IngredientsTags,
   Left,
+  BackPage,
   Right,
   PlateDescription,
 } from "./styles";
@@ -59,9 +60,9 @@ export function DetailsDish() {
                 <>
                   <PlateDescription>
                     <Left>
-                      <Link to="/">
+                      <BackPage to="/">
                         <AiOutlineArrowLeft /> voltar
-                      </Link>
+                      </BackPage>
                       <img src={imageURL} alt={data.title} />
                     </Left>
                     <Right>
@@ -89,9 +90,9 @@ export function DetailsDish() {
                 <>
                   <PlateDescription>
                     <Left>
-                      <Link to="/">
+                      <BackPage to="/">
                         <AiOutlineArrowLeft /> voltar
-                      </Link>
+                      </BackPage>
                       <img src={imageURL} alt={data.title} />
                     </Left>
                     <Right>
@@ -105,8 +106,10 @@ export function DetailsDish() {
                           />
                         ))}
                       </IngredientsTags>
-                      <Stepper />
-                      <ButtonIcon title={`incluir . R$ ${data.price}`} />
+                      <div className="side">
+                        <Stepper />
+                        <ButtonText title={`incluir . R$ ${data.price}`} />
+                      </div>
                     </Right>
                   </PlateDescription>
                 </>

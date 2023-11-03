@@ -52,11 +52,10 @@ export function Profile() {
 
   return (
     <Container>
-      <header>
-        <ButtonBack onClick={handleBack}>
-          <AiOutlineRollback />
-        </ButtonBack>
-      </header>
+      <ButtonBack onClick={handleBack}>
+        <AiOutlineRollback />
+      </ButtonBack>
+
       <Form>
         <Avatar>
           <img src={avatar} alt="Foto do usuário" />

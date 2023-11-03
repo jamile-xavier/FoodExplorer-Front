@@ -1,4 +1,12 @@
-import { Container, Header, Profile, Button, Nav, AddDish } from "./styles";
+import {
+  Container,
+  Header,
+  Search,
+  Profile,
+  Button,
+  Nav,
+  AddDish,
+} from "./styles";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 import { Input } from "../Input";
 import { Footer } from "../Footer";
@@ -33,7 +41,7 @@ export function MobileMenu({ menuIsOpen, onCloseMenu }) {
         )}
         <h3>Menu</h3>
       </Header>
-      <label>
+      <Search>
         <Input
           icon={AiOutlineSearch}
           placeholder="Busque por pratos ou ingredientes"
@@ -41,7 +49,7 @@ export function MobileMenu({ menuIsOpen, onCloseMenu }) {
             search(e.target.value);
           }}
         />
-      </label>
+      </Search>
       {[USER_ROLE.ADMIN, USER_ROLE.CUSTOMER].includes(user.role) && (
         <>
           {user.role === USER_ROLE.ADMIN && (

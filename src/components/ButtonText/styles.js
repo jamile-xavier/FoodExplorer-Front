@@ -19,5 +19,7 @@ export const Container = styled.button`
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     font-size: 1.6rem;
+    width: 21.6rem;
+    height: 4.8rem;
   }
 `;

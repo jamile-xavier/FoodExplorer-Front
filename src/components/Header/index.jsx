@@ -29,6 +29,10 @@ export function Header({ onOpenMenu, search }) {
     navigate("/addDish");
   }
 
+  const avatarURL = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
+
   return (
     <Container>
       {[USER_ROLE.ADMIN, USER_ROLE.CUSTOMER].includes(user.role) && (
@@ -56,6 +60,7 @@ export function Header({ onOpenMenu, search }) {
                   </label>
                   <ButtonText title="Novo Prato" onClick={handleAddDish} />
                   <Profile to="/profile">
+                    <img src={avatarURL} alt={user.name} />
                     <span>Bem vindo (a) </span>
                     <span>{user.name} </span>
                   </Profile>
@@ -88,8 +93,9 @@ export function Header({ onOpenMenu, search }) {
                       }}
                     />
                   </label>
-                  <ButtonIcon icon={PiReceiptLight} title="Pedidos" qtde="0" />
+                  <ButtonIcon icon={PiReceiptLight} title="Pedidos " qtde="0" />
                   <Profile to="/profile">
+                    <img src={avatarURL} alt={user.name} />
                     <span>Bem vindo (a) </span>
                     <span>{user.name} </span>
                   </Profile>

@@ -29,6 +29,11 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    max-width: 300rem;
+    margin: 0 auto;
+  }
 `;
 
 export const Banner = styled.section`
@@ -47,6 +52,14 @@ export const Banner = styled.section`
 
   .banner_title {
     padding: 1.6rem 0.8rem;
+
+    > h1 {
+      font-size: 1.8rem;
+    }
+
+    > span {
+      font-size: 1.2rem;
+    }
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.SM}) {
@@ -65,6 +78,16 @@ export const Banner = styled.section`
       height: 19rem;
       margin-top: -6rem;
     }
+
+    .banner_title {
+      > h1 {
+        font-size: 2.2rem;
+      }
+
+      > span {
+        font-size: 1.4rem;
+      }
+    }
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
@@ -76,13 +99,43 @@ export const Banner = styled.section`
       height: 34.6rem;
       margin: -8rem 0 0 -4rem;
     }
+
+    .banner_title {
+      > h1 {
+        font-size: 4rem;
+      }
+
+      > span {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
+    justify-content: flex-start;
+    gap: 40rem;
+    height: 40rem;
+
+    > img {
+      width: 100rem;
+      height: 48rem;
+    }
+
+    .banner_title {
+      > h1 {
+        font-size: 6rem;
+      }
+      > span {
+        font-size: 2rem;
+      }
+    }
   }
 `;
 
 export const Dishes = styled.div`
-  /*  .dishes,
-  .desserts,
-  .drinks {
-    display: flex;
-  }*/
+  padding: 2rem;
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    padding: 4rem;
+  }
 `;

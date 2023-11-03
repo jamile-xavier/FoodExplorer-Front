@@ -34,6 +34,11 @@ export const Header = styled.header`
   }
 `;
 
+export const Search = styled.div`
+  margin: 3.6rem 2.8rem 0;
+  width: 100%;
+`;
+
 export const Button = styled.button`
   background: none;
   border: none;

@@ -19,6 +19,11 @@ export const Content = styled.div`
   @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
     margin: 0rem 8rem;
   }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    max-width: 300rem;
+    margin: 0 auto;
+  }
 `;
 
 export const Form = styled.form`

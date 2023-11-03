@@ -47,4 +47,8 @@ export const Container = styled.div`
       height: 2.4rem;
     }
   }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
+    height: 6.8rem;
+  }
 `;
