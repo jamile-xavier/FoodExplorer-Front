@@ -79,6 +79,18 @@ export function EditDish() {
   }, []);
 
   async function handleEditDish() {
+    if (
+      !title ||
+      ingredients.length < 1 ||
+      newIngredient ||
+      !category ||
+      !price ||
+      !description
+    ) {
+      return alert(
+        "Para salvar as alterações é necessário que todos os campos estejam preenchidos!"
+      );
+    }
     const formData = new FormData();
     formData.append("image", imageFile);
     formData.append("title", title);

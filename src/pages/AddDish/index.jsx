@@ -67,16 +67,6 @@ export function AddDish() {
       return alert("Informe uma descrição do prato.");
     }
 
-    /*api.post("/dishes", {
-      title,
-      description,
-      category,
-      image,
-      price,
-    });
-    alert("Prato cadastrado com sucesso");
-    navigate("/");
-  }*/
     const formData = new FormData();
     formData.append("image", image);
     formData.append("title", title);

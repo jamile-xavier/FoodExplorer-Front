@@ -32,15 +32,29 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 1rem;
 
+  > label {
+    margin-bottom: 0.8rem;
+  }
+
+  .category,
+  .ingredients,
+  .description {
+    > label {
+      margin-bottom: 1.3rem;
+    }
+  }
+
   .category {
     display: flex;
     flex-direction: column;
+
     > select {
       background-color: ${({ theme }) => theme.COLORS.DARK_900};
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
-      padding: 1.3rem 1.6rem;
+      padding: 1.2rem 1.4rem;
       border: none;
       border-radius: 0.8rem;
+      height: 3.8rem;
     }
   }
 
@@ -54,12 +68,28 @@ export const Form = styled.form`
       gap: 0.8rem;
 
       width: 100%;
-      height: auto;
+      min-height: 3.8rem;
+      max-height: auto;
       padding: 0.4rem;
 
       border-radius: 0.8rem;
 
       background-color: ${({ theme }) => theme.COLORS.DARK_900};
+    }
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+    .category {
+      > select {
+        height: 5rem;
+        font-size: 1.4rem;
+      }
+    }
+
+    .ingredients {
+      .ingredient {
+        min-height: 5rem;
+      }
     }
   }
 
@@ -69,7 +99,8 @@ export const Form = styled.form`
       "image name category"
       "ingredients ingredients price"
       "description description description";
-    align-items: color-interpolation-filters;
+    align-items: baseline;
+    justify-items: stretch;
 
     .image {
       grid-area: image;
@@ -81,6 +112,7 @@ export const Form = styled.form`
 
     .category {
       grid-area: category;
+      font-size: 1.6rem;
     }
 
     .ingredients {
@@ -131,14 +163,14 @@ export const Buttons = styled.div`
     margin-top: 2.4rem;
   }
 
-  @media (min-width: ${DEVICE_BREAKPOINTS}) {
-    /* display: flex;
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    display: flex;
     gap: 3.2rem;
     align-content: space-between;
     justify-content: flex-end;
 
     > button {
       width: 17.2rem;
-    }*/
+    }
   }
 `;

@@ -15,6 +15,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   margin: 0rem 2rem;
+  height: 100vh;
 
   @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
     margin: 0rem 8rem;
@@ -31,15 +32,24 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 1rem;
 
+  .category,
+  .ingredients,
+  .description {
+    > label {
+      margin-bottom: 1.3rem;
+    }
+  }
+
   .category {
     display: flex;
     flex-direction: column;
     > select {
       background-color: ${({ theme }) => theme.COLORS.DARK_900};
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
-      padding: 2.5rem 1.6rem;
+      padding: 1.2rem 1.4rem;
       border: none;
       border-radius: 0.8rem;
+      height: 3.8rem;
     }
   }
 
@@ -53,12 +63,28 @@ export const Form = styled.form`
       gap: 0.8rem;
 
       width: 100%;
-      height: auto;
+      min-height: 3.8rem;
+      max-height: auto;
       padding: 0.4rem;
 
       border-radius: 0.8rem;
 
       background-color: ${({ theme }) => theme.COLORS.DARK_900};
+    }
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.MD}) {
+    .category {
+      > select {
+        height: 5rem;
+        font-size: 1.4rem;
+      }
+    }
+
+    .ingredients {
+      .ingredient {
+        min-height: 5rem;
+      }
     }
   }
 
@@ -68,7 +94,8 @@ export const Form = styled.form`
       "image name category"
       "ingredients ingredients price"
       "description description description";
-    align-items: center;
+    align-items: baseline;
+    justify-items: stretch;
 
     .name {
       grid-area: name;
@@ -76,6 +103,7 @@ export const Form = styled.form`
 
     .category {
       grid-area: category;
+      font-size: 1.6rem;
     }
 
     .ingredients {
@@ -166,6 +194,12 @@ export const Image = styled.form`
       right: 2.8rem;
     }
   }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
+    > input {
+      height: auto;
+    }
+  }
 `;
 
 export const Text = styled.div`
@@ -211,15 +245,6 @@ export const Buttons = styled.div`
     display: flex;
     gap: 3.2rem;
     justify-content: space-evenly;
-
-    /* display: flex;
-    gap: 3.2rem;
-    align-content: space-between;
-    justify-content: flex-end;
-
-    > button {
-      width: 17.2rem;
-    }*/
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {

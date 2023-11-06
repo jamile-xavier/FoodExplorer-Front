@@ -8,11 +8,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.DARK_900};
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
   border-radius: 0.8rem;
-  margin-bottom: 1rem;
-
-  > label {
-    margin-bottom: 0.8rem;
-  }
+  margin: 1rem 0;
 
   > input {
     width: 100%;
@@ -46,9 +42,5 @@ export const Container = styled.div`
       width: 2.4rem;
       height: 2.4rem;
     }
-  }
-
-  @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
-    height: 6.8rem;
   }
 `;
