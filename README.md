@@ -17,38 +17,53 @@
 
 ## Sumário
 
-- 🛠 [Funcionalidades](#Funcionalidades)
-- 🎯 [Critérios_Obrigatórios](#Critérios_Obrigatórios)
-- 💻 [Tecnologias](#Tecnologias)
-- 🔑 [Contas](#Contas_de_demonstracao)
-- 💽 [Instalação](#Instalação)
-- 👩 [Autora](#Autora)
-- ➡ [Links](#Links)
-- 📑 [Licença](#Licença)
+==========
 
-  ## 🛠 Funcionalidades
+<!--ts-->
 
-  - [x] Criar conta;
-  - [x] Fazer Login;
-  - [x] Atualizar informações da conta;
-  - [x] Visualizar todos os pratos cadastrados;
-  - [x] Acessar os detalhes de um prato selecionado;
-  - [x] Pesquisar por um prato;
-  - [x] Admin: cadastrar, editar e excluir pratos.
+- 🛠 [Funcionalidades](#funcionalidades)
+- 🎯 [Critérios_Obrigatórios](#criterios-obrigatorios)
+- 💻 [Tecnologias](#tecnologias)
+- 🔑 [Contas](#contas-de-demonstracao)
+  _[Usuário Geral](#usuario)
+  _[Usuário Admin](#admin)
+- 💽 [Instalação](#instalacao)
+- 👩 [Autora](#autora)
+- ➡ [Links](#links)
+  - [GitHub Front End](#github-front-end)
+  - [GitHub Back End](#github-back-end)
+- 📑 [Licença](#licenca)
+<!--te-->
 
-  ## 🎯 Critérios_Obrigatórios
+# 🛠 Funcionalidades
 
-  - Projeto estruturado com organização de pastas e divisão de componentes;
-  - Armazenamento de dados em uma banco de dados;
-  - Autenticação validada por senha na tela de login para acesso a aplicação utilizando JWT.
-  - Todos os elementos (funções, componentes, variáveis) devem possuir nome significativo seguindo boas práticas do mercado;
-  - Usuários e admin podem realizar pesquisa de pratos;
-  - O admin deverá realizar updload de imagem para cadastrar um prato;
-  - A aplicação deverá ser responsiva seguindo o conceito de Mobile First;
-  - Utilizar animações, transições e transformações para melhor experiência do usuário;
-  - A aplicação deverá consumir sua própria API;
+====================
 
-  ## 💻 Tecnologias
+- [x] Criar conta;
+- [x] Fazer Login;
+- [x] Atualizar informações da conta;
+- [x] Visualizar todos os pratos cadastrados;
+- [x] Acessar os detalhes de um prato selecionado;
+- [x] Pesquisar por um prato;
+- [x] Admin: cadastrar, editar e excluir pratos.
+
+## 🎯 Critérios Obrigatórios
+
+=============================
+
+- Projeto estruturado com organização de pastas e divisão de componentes;
+- Armazenamento de dados em uma banco de dados;
+- Autenticação validada por senha na tela de login para acesso a aplicação utilizando JWT.
+- Todos os elementos (funções, componentes, variáveis) devem possuir nome significativo seguindo boas práticas do mercado;
+- Usuários e admin podem realizar pesquisa de pratos;
+- O admin deverá realizar updload de imagem para cadastrar um prato;
+- A aplicação deverá ser responsiva seguindo o conceito de Mobile First;
+- Utilizar animações, transições e transformações para melhor experiência do usuário;
+- A aplicação deverá consumir sua própria API;
+
+## 💻 Tecnologias
+
+==================
 
 - [Axios](https://axios-http.com/docs/intro)
 - [React](https://pt-br.legacy.reactjs.org/)
@@ -58,22 +73,31 @@
 - [EsLint](https://eslint.org/docs/latest/)
 - [Vite](https://vitejs.dev/guide/)
 
-## 🔑 Contas_de_demonstração
+## 🔑 Contas de demonstração
 
-- Usuário comum:
-  Login: user@foodexplorer.com;
-  Senha: 123456;
+=============================
 
-- Usuário Admin:
-  Login: admin@foodexplorer.com;
-  Senha: 012345;
+ <div>
+ Usuário comum:
+---------------
+ <p> Login: user@foodexplorer.com</p>
+ <p> Senha: 123456</p>
+
+## Usuário Admin:
+
+ <p> Login: admin@foodexplorer.com </p>
+ <p> Senha: 012345</p>
 
 ## 💽 Instalação
+
+=================
 
 Para utilizar o projeto em sua máquina será necessário possuir as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Você precisará também de um editor como o [VSCode](https://code.visualstudio.com/).
 
 ### Rodando o Front End
+
+=======================
 
 ```bash
 # Clone este repositório
@@ -94,15 +118,22 @@ $ npm run dev
 
 # 👩 Autora
 
-[Jamile](https://github.com/jamile-xavier)
-[Linkedin](https://www.linkedin.com/in/jamile-xavier/)
+============
+
+<p>[Jamile](https://github.com/jamile-xavier)</p>
+<p>[Linkedin](https://www.linkedin.com/in/jamile-xavier/)</p>
 
 # ➡ Links
 
-[Repositorio-front](https://github.com/jamile-xavier/FoodExplorer-Front)
-[Repositorio-back](https://github.com/jamile-xavier/FoodExplorer-Back)
+==========
+
+<p>
+[Repositorio-front](https://github.com/jamile-xavier/FoodExplorer-Front)</p>
+<p>[Repositorio-back](https://github.com/jamile-xavier/FoodExplorer-Back)</p>
 
 # 📑 Licença
+
+=============
 
 Licença MIT
 
