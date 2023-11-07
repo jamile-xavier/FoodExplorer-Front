@@ -23,14 +23,14 @@ Sumário
 - 🎯 [Critérios Obrigatórios](#criterios-obrigatorios)
 - 💻 [Tecnologias](#tecnologias)
 - 🔑 [Contas](#contas-de-demonstracao)
-  _[Usuário Geral](#usuario)
-  _[Usuário Admin](#admin)
+  -[Usuário Geral](#usuario-geral)
+  -[Usuário Admin](#usuario-admin)
 - 💽 [Instalação](#instalacao)
 - 👩 [Autora](#autora)
 - ➡ [Links](#links)
   - [GitHub Front End](#github-front-end)
   - [GitHub Back End](#github-back-end)
-- 📑 [Licença](#licenca)
+- 📑 [Licença](#licença)
 <!--te-->
 
 Funcionalidades
@@ -113,9 +113,13 @@ Autora
 Links
 =====
 
-<p>
-[Repositorio-front](https://github.com/jamile-xavier/FoodExplorer-Front)</p>
-<p>[Repositorio-back](https://github.com/jamile-xavier/FoodExplorer-Back)</p>
+Git Hub Front End
+-----------------
+[Repositorio-front](https://github.com/jamile-xavier/FoodExplorer-Front)
+
+Git Hub Back End
+-----------------
+[Repositorio-back](https://github.com/jamile-xavier/FoodExplorer-Back)
 
 Licença
 ========
