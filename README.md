@@ -44,7 +44,7 @@ Funcionalidades
 - [x] Admin: cadastrar, editar e excluir pratos.
 
 Critérios Obrigatórios
-=============================
+======================
 - Projeto estruturado com organização de pastas e divisão de componentes;
 - Armazenamento de dados em uma banco de dados;
 - Autenticação validada por senha na tela de login para acesso a aplicação utilizando JWT.
