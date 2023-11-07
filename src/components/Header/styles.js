@@ -123,7 +123,7 @@ export const Profile = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 15rem;
+  width: 20rem;
   padding: 1rem;
   margin: 0 2.8rem;
 

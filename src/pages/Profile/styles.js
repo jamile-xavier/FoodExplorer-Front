@@ -14,12 +14,10 @@ export const Container = styled.div`
 `;
 
 export const ButtonBack = styled.button`
-  width: 100%;
-  height: 10rem;
-  display: flex;
-  justify-content: end;
+  height: 5rem;
   background: none;
   border: none;
+  border-radius: 0.5rem;
 
   svg {
     color: ${({ theme }) => theme.COLORS.LIGHT_100};

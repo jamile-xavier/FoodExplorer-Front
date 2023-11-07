@@ -51,6 +51,10 @@ export const Form = styled.form`
       border-radius: 0.8rem;
       height: 3.8rem;
     }
+
+    > select:focus {
+      border: 1px solid ${({ theme }) => theme.COLORS.CARROT_100};
+    }
   }
 
   .ingredients {

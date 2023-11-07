@@ -52,6 +52,8 @@ export const Banner = styled.section`
 
   .banner_title {
     padding: 1.6rem 0.8rem;
+    animation-duration: 3s;
+    animation-name: slideIn;
 
     > h1 {
       font-size: 1.8rem;
@@ -59,6 +61,15 @@ export const Banner = styled.section`
 
     > span {
       font-size: 1.2rem;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
     }
   }
 
@@ -107,26 +118,6 @@ export const Banner = styled.section`
 
       > span {
         font-size: 1.6rem;
-      }
-    }
-  }
-
-  @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
-    justify-content: flex-start;
-    gap: 40rem;
-    height: 40rem;
-
-    > img {
-      width: 100rem;
-      height: 48rem;
-    }
-
-    .banner_title {
-      > h1 {
-        font-size: 6rem;
-      }
-      > span {
-        font-size: 2rem;
       }
     }
   }
