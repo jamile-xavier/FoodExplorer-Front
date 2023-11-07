@@ -15,13 +15,20 @@
 <p align="center">O admin é responsável pelo restaurante, sendo permitindo a criação, visualização, edição e exclusão de pratos. Os pratos deverão conter yma imagem, um nome, uma categoria, ingredientes, preço e uma breve descrição.</p>
 <p align="center">O usuário poderá visualizar todos os pratos cadastrados e ao clicar em um prato será redirecionado para uma página com as informações detalhadas do prato.</p>
 
+<<<<<<< HEAD
+
+# Sumário
+
+=======
 Sumário
 =======
+
+> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
 
 <!--ts-->
 
 - 🛠 [Funcionalidades](#funcionalidades)
-- 🎯 [Critérios_Obrigatórios](#criterios-obrigatorios)
+- 🎯 [Critérios Obrigatórios](#criterios-obrigatorios)
 - 💻 [Tecnologias](#tecnologias)
 - 🔑 [Contas](#contas-de-demonstracao)
   _[Usuário Geral](#usuario)
@@ -34,8 +41,15 @@ Sumário
 - 📑 [Licença](#licenca)
 <!--te-->
 
+<<<<<<< HEAD
+
+# 🛠 Funcionalidades
+
+=======
 Funcionalidades
 ===============
+
+> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
 
 - [x] Criar conta;
 - [x] Fazer Login;
@@ -45,8 +59,15 @@ Funcionalidades
 - [x] Pesquisar por um prato;
 - [x] Admin: cadastrar, editar e excluir pratos.
 
+<<<<<<< HEAD
+
+# 🎯 Critérios Obrigatórios
+
+=======
 Critérios Obrigatórios
 =============================
+
+> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
 
 - Projeto estruturado com organização de pastas e divisão de componentes;
 - Armazenamento de dados em uma banco de dados;
@@ -58,8 +79,15 @@ Critérios Obrigatórios
 - Utilizar animações, transições e transformações para melhor experiência do usuário;
 - A aplicação deverá consumir sua própria API;
 
+<<<<<<< HEAD
+
+# 💻 Tecnologias
+
+=======
 Tecnologias
 ===========
+
+> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
 
 - [Axios](https://axios-http.com/docs/intro)
 - [React](https://pt-br.legacy.reactjs.org/)
@@ -69,7 +97,24 @@ Tecnologias
 - [EsLint](https://eslint.org/docs/latest/)
 - [Vite](https://vitejs.dev/guide/)
 
-Contas de demonstração
+<<<<<<< HEAD
+
+# 🔑 Contas de demonstração
+
+## Usuário comum:
+
+<p> Login: user@foodexplorer.com</p>
+<p> Senha: 123456</p>
+
+## Usuário Admin:
+
+<p> Login: admin@foodexplorer.com </p>
+<p> Senha: 012345</p>
+
+# 💽 Instalação
+
+=======
+Contas de demonstraçãogit pu
 ======================
 
  <div>
@@ -78,19 +123,27 @@ Contas de demonstração
  <p> Login: user@foodexplorer.com</p>
  <p> Senha: 123456</p>
 
-Usuário Admin:
---------------
+## Usuário Admin:
+
  <p> Login: admin@foodexplorer.com </p>
  <p> Senha: 012345</p>
 
-Instalação
-==========
+# Instalação
+
+> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
 
 Para utilizar o projeto em sua máquina será necessário possuir as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Você precisará também de um editor como o [VSCode](https://code.visualstudio.com/).
 
+<<<<<<< HEAD
+
+# Rodando o Front End
+
+=======
 Rodando o Front End
 ===================
+
+> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
 
 ```bash
 # Clone este repositório
@@ -109,21 +162,18 @@ $ npm run dev
 
 ```
 
-Autora
-======
+# Autora
 
 <p>[Jamile](https://github.com/jamile-xavier)</p>
 <p>[Linkedin](https://www.linkedin.com/in/jamile-xavier/)</p>
 
-Links
-=====
+# Links
 
 <p>
 [Repositorio-front](https://github.com/jamile-xavier/FoodExplorer-Front)</p>
 <p>[Repositorio-back](https://github.com/jamile-xavier/FoodExplorer-Back)</p>
 
-Licença
-=======
+# Licença
 
 Licença MIT
 
