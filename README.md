@@ -35,9 +35,8 @@
 - 📑 [Licença](#licenca)
 <!--te-->
 
-# 🛠 Funcionalidades
-
-====================
+Funcionalidades
+===============
 
 - [x] Criar conta;
 - [x] Fazer Login;
@@ -47,8 +46,7 @@
 - [x] Pesquisar por um prato;
 - [x] Admin: cadastrar, editar e excluir pratos.
 
-## 🎯 Critérios Obrigatórios
-
+Critérios Obrigatórios
 =============================
 
 - Projeto estruturado com organização de pastas e divisão de componentes;
