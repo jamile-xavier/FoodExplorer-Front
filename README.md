@@ -20,12 +20,12 @@ Sumário
 <!--ts-->
 
 - 🛠 [Funcionalidades](#funcionalidades)
-- 🎯 [Critérios Obrigatórios](#criterios-obrigatorios)
+- 🎯 [Critérios Obrigatórios](#critérios-obrigatórios)
 - 💻 [Tecnologias](#tecnologias)
-- 🔑 [Contas](#contas-de-demonstracao)
-  -[Usuário Geral](#usuario-geral)
-  -[Usuário Admin](#usuario-admin)
-- 💽 [Instalação](#instalacao)
+- 🔑 [Contas](#contas-de-demonstração)
+   -[Usuário Geral](#usuario-geral)
+   -[Usuário Admin](#usuario-admin)
+- 💽 [Instalação](#instalação)
 - 👩 [Autora](#autora)
 - ➡ [Links](#links)
   - [GitHub Front End](#github-front-end)
