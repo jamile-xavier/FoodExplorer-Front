@@ -17,7 +17,7 @@
 
 ## Sumário
 
-- 🛠 [Funcionalidades](#Funcionalidades)
+- 🛠 [Funcionalidades](#funcionalidades)
 - 🎯 [Critérios_Obrigatórios](#criterios-obrigatorios)
 - 💻 [Tecnologias](#tecnologias)
 - 🔑 [Contas](#Contas-de-demonstracao)
