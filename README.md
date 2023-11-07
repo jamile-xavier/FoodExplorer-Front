@@ -1,11 +1,14 @@
-<img src="./src/assets/Logo.svg">
+<div align="center">
+<img src="./src/assets/Logo.svg" alt= "Logo do Food Explorer">
+</div>
 
 <h1 align="center"> FOOD EXPLORER - FRONT END </h1>
 
 ## Descrição do Projeto
 
 <h1 align="center">
-<a href=""> Link do site em funcionamento</a>
+<!--incluir o link do deploy><!-->
+<a href=""> Food Explorer</a>
 </h1>
 <p align="center"> O Food Explorer é uma aplicação responsiva que simula um menu interativo para um restaurante fictício. </p>
 <p align="center">A aplicação é baseada em modelo disponibilizado no Figma e possui duas personas: o admin e o usuário.</p>
@@ -14,16 +17,99 @@
 
 ## Sumário
 
-- 🛠 [Funcionalidades] (#funcionalidades)
-- 🎯 [Critérios Obrigatórios] (#criterios-obrigatorios)
-- 💻 [Tecnologias] (#tecnologias)
-- 🔑 [Contas] (#Contas-de-demonstracao)
-- 💽 [Instalação] (#instalacao)
-- 📑 [Licença] (#licença)
-- 👩 [Autora] (#autora)
-- ➡ [Links Front e Back End] (#links-front-e-back-end)
-- 📸 [Imagens do Projeto] (#imagens-do-projeto)
-  _[Mobile Admin] (#mobile-admin)
-  _[Mobile User] (#mobile-User)
-  _[Desktop Admin] (#desktop-admin)
-  _[Desktop User] (#desktop-User)
+- 🛠 [Funcionalidades](#funcionalidades)
+- 🎯 [Critérios_Obrigatórios](#criterios-obrigatorios)
+- 💻 [Tecnologias](#tecnologias)
+- 🔑 [Contas](#Contas-de-demonstracao)
+- 💽 [Instalação](#instalacao)
+- 👩 [Autora](#autora)
+- ➡ [Links](#links)
+- 📑 [Licença](#licença)
+
+  ## 🛠 Funcionalidades
+
+  - [x] Criar conta;
+  - [x] Fazer Login;
+  - [x] Atualizar informações da conta;
+  - [x] Visualizar todos os pratos cadastrados;
+  - [x] Acessar os detalhes de um prato selecionado;
+  - [x] Pesquisar por um prato;
+  - [x] Admin: cadastrar, editar e excluir pratos.
+
+  ## 🎯 Critérios Obrigatórios
+
+  - Projeto estruturado com organização de pastas e divisão de componentes;
+  - Armazenamento de dados em uma banco de dados;
+  - Autenticação validada por senha na tela de login para acesso a aplicação utilizando JWT.
+  - Todos os elementos (funções, componentes, variáveis) devem possuir nome significativo seguindo boas práticas do mercado;
+  - Usuários e admin podem realizar pesquisa de pratos;
+  - O admin deverá realizar updload de imagem para cadastrar um prato;
+  - A aplicação deverá ser responsiva seguindo o conceito de Mobile First;
+  - Utilizar animações, transições e transformações para melhor experiência do usuário;
+  - A aplicação deverá consumir sua própria API;
+
+  ## 💻 Tecnologias
+
+- [Axios](https://axios-http.com/docs/intro)
+- [React](https://pt-br.legacy.reactjs.org/)
+- [React-Icons](https://react-icons.github.io/react-icons/)
+- [Styled-Components](https://styled-components.com/docs/basics#getting-started)
+- [Swiper](https://swiperjs.com/get-started)
+- [EsLint](https://eslint.org/docs/latest/)
+- [Vite](https://vitejs.dev/guide/)
+
+## 🔑 Contas de demonstração
+
+- Usuário comum:
+  Login: user@foodexplorer.com;
+  Senha: 123456;
+
+- Usuário Admin:
+  Login: admin@foodexplorer.com;
+  Senha: 012345;
+
+## 💽 Instalação
+
+Para utilizar o projeto em sua máquina será necessário possuir as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Você precisará também de um editor como o [VSCode](https://code.visualstudio.com/).
+
+### Rodando o Front End
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/jamile-xavier/FoodExplorer-Front.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd FoodExplorer-Front
+
+# Instale as dependências
+$ npm i
+
+# Execute a aplicação no modo de desenvolvimento
+$ npm run dev
+
+# A aplicação iniciará na porta 5173 - acesse <http://localhost:5173>
+
+```
+
+# 👩 Autora
+
+[Jamile](https://github.com/jamile-xavier)
+[Linkedin](https://www.linkedin.com/in/jamile-xavier/)
+
+# ➡ Links
+
+[Repositorio-front](https://github.com/jamile-xavier/FoodExplorer-Front)
+[Repositorio-back](https://github.com/jamile-xavier/FoodExplorer-Back)
+
+# 📑 Licença
+
+Licença MIT
+
+O figma e requisitos da aplicação é disponibilizado pela [RocketSeat](https://www.rocketseat.com.br/) para conclusão do desafio final do curso Explorer.
+
+O projeto foi criado de acordo com o aprendizado obtido no curso e os componentes, estilos e responsividade criados por mim baseado nos requisitos do projeto e no que foi aprendido durante o curso.
+
+É concedida permissão gratuita para usar, copiar, modificar, mesclar, publicar, distribuir a aplicação desde que inclua a declaração de direitos autorais e o aviso de permissão em todas as cópias ou partes substanciais do software.
+
+O software é fornecido "como está", sem garantia de qualquer tipo expressa ou implícitas, incluindo mas não se limitando às garantias de comercialização, adequação a um determinado fim e não violação.
