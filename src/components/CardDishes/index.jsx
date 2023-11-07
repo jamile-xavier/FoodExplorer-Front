@@ -1,13 +1,21 @@
+//style
 import { Container, EditDish, DetailsDish, Side } from "./styles";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+
+//icons
+import { AiOutlineHeart } from "react-icons/ai";
 import { PiPencilSimpleDuotone } from "react-icons/pi";
 import { IoIosArrowForward } from "react-icons/io";
+
+//components
 import { ButtonText } from "../ButtonText";
 import { Stepper } from "../Stepper";
+
+// hooks and utils
 import { useAuth } from "../../hooks/auth";
 import { USER_ROLE } from "../../utils/role";
+
+//api and others
 import dishImagePlaceholder from "../../assets/dishPlaceholder.png";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../../services/api";
 

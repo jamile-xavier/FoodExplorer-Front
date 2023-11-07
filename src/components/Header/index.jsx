@@ -1,19 +1,28 @@
+//styles
 import { Container, Nav, Menu, Profile, Logout } from "./styles";
+
+//images
 import LogoAdm from "../../assets/LogoAdm.svg";
 import Logo from "../../assets/Logo.svg";
+import avatarPlaceholder from "../../assets/avatarPlaceholder.jpg";
+
+//icons
 import { FiLogOut } from "react-icons/fi";
-import { PiReceiptLight, PiUserCircleThin } from "react-icons/pi";
+import { PiReceiptLight } from "react-icons/pi";
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
+
+//components
 import { ButtonText } from "../ButtonText";
 import { ButtonIcon } from "../ButtonIcon";
-import { Link } from "react-router-dom";
+import { Input } from "../Input";
+
+//hooks and utils
 import { useAuth } from "../../hooks/auth";
 import { USER_ROLE } from "../../utils/role";
+
+// api and others
 import { useNavigate } from "react-router-dom";
-import avatarPlaceholder from "../../assets/avatarPlaceholder.jpg";
 import { api } from "../../services/api";
-import { useEffect, useState } from "react";
-import { Input } from "../Input";
 
 export function Header({ onOpenMenu, search }) {
   const { user, signOut } = useAuth();

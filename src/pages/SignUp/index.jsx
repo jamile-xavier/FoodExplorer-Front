@@ -2,22 +2,20 @@
 import { Container, TextLogin, Form, Acc } from "./styles.js";
 
 // Components
-import Logo from "../../assets/Logo.svg";
 import { ButtonText } from "../../components/ButtonText/index.jsx";
 import { Input } from "../../components/Input/index.jsx";
 
 // API and others
+import Logo from "../../assets/Logo.svg";
 import { useState } from "react";
 import { api } from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 
 export function SignUp() {
-  //useState
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // inicializating navigate
   const navigate = useNavigate();
 
   function handleSignUp() {
@@ -25,7 +23,6 @@ export function SignUp() {
       return alert("Preencha todos os campos!");
     }
 
-    //acess API
     api
       .post("/users", { name, email, password })
       .then(() => {

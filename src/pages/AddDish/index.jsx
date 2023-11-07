@@ -1,12 +1,17 @@
+//styles
 import { Container, Content, Text, Form, Buttons } from "./styles";
+
+//components
 import { Ingredient } from "../../components/Ingredient";
 import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
+import { Header } from "../../components/Header";
 import { Textarea } from "../../components/Textarea";
 import { MobileMenu } from "../../components/MobileMenu";
+
+// api and others
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import { Header } from "../../components/Header";
 import { api } from "../../services/api";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";

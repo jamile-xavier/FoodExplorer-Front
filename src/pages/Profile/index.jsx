@@ -1,13 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// styles
 import { Container, ButtonBack, Form, Avatar } from "./styles";
+
+//components
 import { Input } from "../../components/Input";
-import { useAuth } from "../../hooks/auth";
 import { ButtonText } from "../../components/ButtonText";
+
+// hooks and utils
+import { useAuth } from "../../hooks/auth";
+
+//api and others
 import avatarPlaceholder from "../../assets/avatarPlaceholder.jpg";
 import { api } from "../../services/api";
 import { AiOutlineRollback, AiOutlineCamera } from "react-icons/ai";
-import { ButtonIcon } from "../../components/ButtonIcon";
 
 export function Profile() {
   const { user, updateProfile } = useAuth();

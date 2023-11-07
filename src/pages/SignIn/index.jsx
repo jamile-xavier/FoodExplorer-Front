@@ -6,17 +6,16 @@ import Logo from "../../assets/Logo.svg";
 import { Input } from "../../components/Input/index.jsx";
 import { ButtonText } from "../../components/ButtonText/index.jsx";
 
+// hooks and utils
+import { useAuth } from "../../hooks/auth";
+
 // API and others
 import { useState } from "react";
 
-import { useAuth } from "../../hooks/auth";
-
 export function SignIn() {
-  //useState
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // inicializating context
   const { signIn } = useAuth();
 
   function handleSignIn() {

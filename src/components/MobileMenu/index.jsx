@@ -1,3 +1,4 @@
+//styles
 import {
   Container,
   Header,
@@ -7,13 +8,21 @@ import {
   Nav,
   AddDish,
 } from "./styles";
+
+//icons
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
+import { FiLogOut } from "react-icons/fi";
+
+//components
 import { Input } from "../Input";
 import { Footer } from "../Footer";
-import { Link, useNavigate } from "react-router-dom";
-import { FiLogOut } from "react-icons/fi";
+
+// hooks and utils
 import { USER_ROLE } from "../../utils/role";
 import { useAuth } from "../../hooks/auth";
+
+//api and others
+import { useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
 import avatarPlaceholder from "../../assets/avatarPlaceholder.jpg";
 

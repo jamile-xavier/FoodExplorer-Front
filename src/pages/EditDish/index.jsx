@@ -1,15 +1,20 @@
+//styles
 import { Container, Content, Text, Form, Image, Buttons } from "./styles";
+
+//components
 import { Ingredient } from "../../components/Ingredient";
 import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
+import { MobileMenu } from "../../components/MobileMenu";
+import { Header } from "../../components/Header";
+
+//api and others
 import { AiOutlineArrowLeft, AiOutlineCamera } from "react-icons/ai";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Header } from "../../components/Header";
 import { api } from "../../services/api";
-import { MobileMenu } from "../../components/MobileMenu";
 
 export function EditDish() {
   const navigate = useNavigate();

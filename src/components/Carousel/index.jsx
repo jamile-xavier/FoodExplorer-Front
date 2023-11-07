@@ -1,5 +1,3 @@
-import { useRef, useEffect } from "react";
-
 // Import Swiper React components
 import { Swiper } from "swiper/react";
 
@@ -12,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/a11y";
 
+//styles
 import { Container } from "./styles";
 
 export function Carousel({ children, params }) {

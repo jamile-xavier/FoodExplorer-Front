@@ -1,4 +1,4 @@
-import { Header } from "../../components/Header";
+//styles
 import {
   Container,
   Content,
@@ -9,20 +9,23 @@ import {
   PlateDescription,
 } from "./styles";
 
-import { AiOutlineArrowLeft } from "react-icons/ai";
-import { PiReceiptLight } from "react-icons/pi";
-import { Ingredient } from "../../components/Ingredient";
+//components
+import { Header } from "../../components/Header";
 import { IngredientTag } from "../../components/IngredientTag";
 import { Stepper } from "../../components/Stepper";
-import { ButtonIcon } from "../../components/ButtonIcon";
 import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { MobileMenu } from "../../components/MobileMenu";
+
+// hooks and utils
 import { useAuth } from "../../hooks/auth";
 import { USER_ROLE } from "../../utils/role";
+
+//api and others
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../../services/api";
 import { useState, useEffect } from "react";
-import { MobileMenu } from "../../components/MobileMenu";
 
 export function DetailsDish() {
   const { user } = useAuth();

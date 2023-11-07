@@ -1,19 +1,22 @@
+//styles
 import { Container, Main, Banner, Dishes } from "./styles";
+
+//components
 import { Header } from "../../components/Header";
-
 import { Footer } from "../../components/Footer";
-
-import { useState, useEffect } from "react";
-
-import bannerImage from "../../assets/banner.png";
 import { MobileMenu } from "../../components/MobileMenu";
 import { CardDishes } from "../../components/CardDishes";
-
-import { api } from "../../services/api";
 import { Section } from "../../components/Section";
 
+//Carousel
 import { Carousel } from "../../components/Carousel";
 import { SwiperSlide } from "swiper/react";
+
+//api and others
+
+import { useState, useEffect } from "react";
+import bannerImage from "../../assets/banner.png";
+import { api } from "../../services/api";
 
 export function Home() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
