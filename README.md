@@ -23,8 +23,8 @@ Sumário
 - 🎯 [Critérios Obrigatórios](#critérios-obrigatórios)
 - 💻 [Tecnologias](#tecnologias)
 - 🔑 [Contas](#contas-de-demonstração)
-   -[Usuário Geral](#usuario-geral)
-   -[Usuário Admin](#usuario-admin)
+   - [Usuário Geral](#usuario-geral)
+   - [Usuário Admin](#usuario-admin)
 - 💽 [Instalação](#instalação)
 - 👩 [Autora](#autora)
 - ➡ [Links](#links)
@@ -69,12 +69,12 @@ Tecnologias
 
 Contas de demonstração
 ======================
- Usuário comum:
+ Usuário Geral
 ---------------
  <p> Login: user@foodexplorer.com</p>
  <p> Senha: 123456</p>
 
-Usuário Admin:
+Usuário Admin
 --------------
 
  <p> Login: admin@foodexplorer.com </p>
@@ -113,11 +113,11 @@ Autora
 Links
 =====
 
-Git Hub Front End
+Github Front End
 -----------------
 [Repositorio-front](https://github.com/jamile-xavier/FoodExplorer-Front)
 
-Git Hub Back End
+Github Back End
 -----------------
 [Repositorio-back](https://github.com/jamile-xavier/FoodExplorer-Back)
 
