@@ -20,20 +20,20 @@
 <!--ts-->
 
 - 🛠 [Funcionalidades](#funcionalidades)
-- 🎯 [Critérios Obrigatórios](#criterios-obrigatorios)
+- 🎯 [Critérios Obrigatórios](#critérios-obrigatórios)
 - 💻 [Tecnologias](#tecnologias)
-- 🔑 [Contas](#contas-de-demonstracao)
-  _[Usuário Geral](#usuario)
-  _[Usuário Admin](#admin)
-- 💽 [Instalação](#instalacao)
+- 🔑 [Contas](#contas-de-demonstração)
+  - [Usuário Geral](#usuário-geral)
+  - [Usuário Admin](#usuário-admin)
+- 💽 [Instalação](#instalação)
 - 👩 [Autora](#autora)
 - ➡ [Links](#links)
   - [GitHub Front End](#github-front-end)
   - [GitHub Back End](#github-back-end)
-- 📑 [Licença](#licenca)
+- 📑 [Licença](#licença)
 <!--te-->
 
-# 🛠 Funcionalidades
+# Funcionalidades
 
 - [x] Criar conta;
 - [x] Fazer Login;
@@ -43,7 +43,7 @@
 - [x] Pesquisar por um prato;
 - [x] Admin: cadastrar, editar e excluir pratos.
 
-# 🎯 Critérios Obrigatórios
+# Critérios Obrigatórios
 
 - Projeto estruturado com organização de pastas e divisão de componentes;
 - Armazenamento de dados em uma banco de dados;
@@ -55,7 +55,7 @@
 - Utilizar animações, transições e transformações para melhor experiência do usuário;
 - A aplicação deverá consumir sua própria API;
 
-# 💻 Tecnologias
+# Tecnologias
 
 - [Axios](https://axios-http.com/docs/intro)
 - [React](https://pt-br.legacy.reactjs.org/)
@@ -65,19 +65,19 @@
 - [EsLint](https://eslint.org/docs/latest/)
 - [Vite](https://vitejs.dev/guide/)
 
-# 🔑 Contas de demonstração
+# Contas de demonstração
 
-## Usuário comum:
+## Usuário Geral
 
-<p> Login: user@foodexplorer.com</p>
-<p> Senha: 123456</p>
+ <p> Login: user@foodexplorer.com</p>
+ <p> Senha: 123456</p>
 
-## Usuário Admin:
+## Usuário Admin
 
-<p> Login: admin@foodexplorer.com </p>
-<p> Senha: 012345</p>
+ <p> Login: admin@foodexplorer.com </p>
+ <p> Senha: 012345</p>
 
-# 💽 Instalação
+# Instalação
 
 Para utilizar o projeto em sua máquina será necessário possuir as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Você precisará também de um editor como o [VSCode](https://code.visualstudio.com/).
@@ -101,18 +101,25 @@ $ npm run dev
 
 ```
 
-# 👩 Autora
+# Autora
 
-<p>[Jamile](https://github.com/jamile-xavier)</p>
-<p>[Linkedin](https://www.linkedin.com/in/jamile-xavier/)</p>
+<p> Jamile Xavier Mendonça </p>
 
-# ➡ Links
+[Github](https://github.com/jamile-xavier)
 
-<p>
-[Repositorio-front](https://github.com/jamile-xavier/FoodExplorer-Front)</p>
-<p>[Repositorio-back](https://github.com/jamile-xavier/FoodExplorer-Back)</p>
+[Linkedin](https://www.linkedin.com/in/jamile-xavier/)
 
-# 📑 Licença
+# Links
+
+## Github Front End
+
+[Repositorio-front](https://github.com/jamile-xavier/FoodExplorer-Front)
+
+## Github Back End
+
+[Repositorio-back](https://github.com/jamile-xavier/FoodExplorer-Back)
+
+# Licença
 
 Licença MIT
 
