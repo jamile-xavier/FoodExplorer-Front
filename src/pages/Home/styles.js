@@ -31,7 +31,7 @@ export const Main = styled.div`
   gap: 1.6rem;
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-    max-width: 300rem;
+    max-width: 102.4rem;
     margin: 0 auto;
   }
 `;

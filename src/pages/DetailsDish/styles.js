@@ -25,7 +25,7 @@ export const Content = styled.div`
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     padding-top: 4rem;
     gap: 10rem;
-    max-width: 300rem;
+    max-width: 102.4rem;
     margin: 0 auto;
   }
 `;

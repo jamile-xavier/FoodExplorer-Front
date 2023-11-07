@@ -57,52 +57,56 @@ export function Home() {
             </span>
           </div>
         </Banner>
+        {!menuIsOpen ? (
+          <Dishes>
+            {dishes.filter((dish) => dish.category == "meals").length > 0 && (
+              <>
+                <Section title="Refeições" />
+                <Carousel params={paramsCarousel}>
+                  {dishes
+                    .filter((dish) => dish.category == "meals")
+                    .map((dish) => (
+                      <SwiperSlide key={String(dish.id)}>
+                        <CardDishes data={dish} />
+                      </SwiperSlide>
+                    ))}
+                </Carousel>
+              </>
+            )}
 
-        <Dishes>
-          {dishes.filter((dish) => dish.category == "meals").length > 0 && (
-            <>
-              <Section title="Refeições" />
-              <Carousel params={paramsCarousel}>
-                {dishes
-                  .filter((dish) => dish.category == "meals")
-                  .map((dish) => (
-                    <SwiperSlide key={String(dish.id)}>
-                      <CardDishes data={dish} />
-                    </SwiperSlide>
-                  ))}
-              </Carousel>
-            </>
-          )}
-
-          {dishes.filter((dish) => dish.category == "desserts").length > 0 && (
-            <>
-              <Section title="Sobremesas" />
-              <Carousel params={paramsCarousel}>
-                {dishes
-                  .filter((dish) => dish.category == "desserts")
-                  .map((dish) => (
-                    <SwiperSlide key={String(dish.id)}>
-                      <CardDishes data={dish} />
-                    </SwiperSlide>
-                  ))}
-              </Carousel>
-            </>
-          )}
-          {dishes.filter((dish) => dish.category == "drinks").length > 0 && (
-            <>
-              <Section title="Bebidas" />
-              <Carousel params={paramsCarousel}>
-                {dishes
-                  .filter((dish) => dish.category == "drinks")
-                  .map((dish) => (
-                    <SwiperSlide key={String(dish.id)}>
-                      <CardDishes data={dish} />
-                    </SwiperSlide>
-                  ))}
-              </Carousel>
-            </>
-          )}
-        </Dishes>
+            {dishes.filter((dish) => dish.category == "desserts").length >
+              0 && (
+              <>
+                <Section title="Sobremesas" />
+                <Carousel params={paramsCarousel}>
+                  {dishes
+                    .filter((dish) => dish.category == "desserts")
+                    .map((dish) => (
+                      <SwiperSlide key={String(dish.id)}>
+                        <CardDishes data={dish} />
+                      </SwiperSlide>
+                    ))}
+                </Carousel>
+              </>
+            )}
+            {dishes.filter((dish) => dish.category == "drinks").length > 0 && (
+              <>
+                <Section title="Bebidas" />
+                <Carousel params={paramsCarousel}>
+                  {dishes
+                    .filter((dish) => dish.category == "drinks")
+                    .map((dish) => (
+                      <SwiperSlide key={String(dish.id)}>
+                        <CardDishes data={dish} />
+                      </SwiperSlide>
+                    ))}
+                </Carousel>
+              </>
+            )}
+          </Dishes>
+        ) : (
+          ""
+        )}
       </Main>
       <Footer />
     </Container>

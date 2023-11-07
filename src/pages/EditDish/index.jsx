@@ -38,7 +38,14 @@ export function EditDish() {
   }
 
   function handleAddIngredient() {
-    setIngredients((prevState) => [...prevState, newIngredient]);
+    if (
+      newIngredient &&
+      !ingredients.includes(newIngredient.toLocaleLowerCase())
+    ) {
+      setIngredients((prevState) => [...prevState, newIngredient]);
+    } else {
+      alert("O campo está vazio ou o ingrediente já existe na lista!");
+    }
     setNewIngredient("");
   }
 
@@ -92,7 +99,7 @@ export function EditDish() {
       );
     }
     const formData = new FormData();
-    formData.append("image", imageFile);
+    formData.append("image", imageFile || data?.image);
     formData.append("title", title);
     formData.append("description", description);
     formData.append("category", category);

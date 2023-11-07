@@ -54,6 +54,11 @@ export const Container = styled.div`
     }
   }
 
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    max-width: 102.4rem;
+    margin: 0 auto;
+  }
+
   @media (min-width: ${DEVICE_BREAKPOINTS.XL}) {
     > img {
       width: 50rem;

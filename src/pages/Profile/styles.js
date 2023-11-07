@@ -8,7 +8,7 @@ export const Container = styled.div`
   margin: 0 auto;
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-    max-width: 120rem;
+    max-width: 102.4rem;
     margin: 0 auto;
   }
 `;

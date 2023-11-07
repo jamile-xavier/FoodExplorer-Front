@@ -26,7 +26,14 @@ export function AddDish() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   function handleAddIngredient() {
-    setIngredients((prevState) => [...prevState, newIngredient]);
+    if (
+      newIngredient &&
+      !ingredients.includes(newIngredient.toLocaleLowerCase())
+    ) {
+      setIngredients((prevState) => [...prevState, newIngredient]);
+    } else {
+      alert("O campo está vazio ou o ingrediente já existe na lista!");
+    }
     setNewIngredient("");
   }
 

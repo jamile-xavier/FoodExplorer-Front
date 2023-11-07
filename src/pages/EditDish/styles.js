@@ -22,7 +22,7 @@ export const Content = styled.div`
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-    max-width: 300rem;
+    max-width: 102.4rem;
     margin: 0 auto;
   }
 `;
