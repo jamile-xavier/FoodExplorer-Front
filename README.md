@@ -17,14 +17,14 @@
 
 ## Sumário
 
-- 🛠 [Funcionalidades](#funcionalidades)
-- 🎯 [Critérios_Obrigatórios](#criterios-obrigatorios)
-- 💻 [Tecnologias](#tecnologias)
-- 🔑 [Contas](#Contas-de-demonstracao)
-- 💽 [Instalação](#instalacao)
-- 👩 [Autora](#autora)
-- ➡ [Links](#links)
-- 📑 [Licença](#licença)
+- 🛠 [Funcionalidades](#Funcionalidades)
+- 🎯 [Critérios_Obrigatórios](#Critérios_Obrigatórios)
+- 💻 [Tecnologias](#Tecnologias)
+- 🔑 [Contas](#Contas_de_demonstracao)
+- 💽 [Instalação](#Instalação)
+- 👩 [Autora](#Autora)
+- ➡ [Links](#Links)
+- 📑 [Licença](#Licença)
 
   ## 🛠 Funcionalidades
 
@@ -36,7 +36,7 @@
   - [x] Pesquisar por um prato;
   - [x] Admin: cadastrar, editar e excluir pratos.
 
-  ## 🎯 Critérios Obrigatórios
+  ## 🎯 Critérios_Obrigatórios
 
   - Projeto estruturado com organização de pastas e divisão de componentes;
   - Armazenamento de dados em uma banco de dados;
@@ -58,7 +58,7 @@
 - [EsLint](https://eslint.org/docs/latest/)
 - [Vite](https://vitejs.dev/guide/)
 
-## 🔑 Contas de demonstração
+## 🔑 Contas_de_demonstração
 
 - Usuário comum:
   Login: user@foodexplorer.com;
