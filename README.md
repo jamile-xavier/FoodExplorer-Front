@@ -16,15 +16,8 @@
 <p align="center">O usuário poderá visualizar todos os pratos cadastrados e ao clicar em um prato será redirecionado para uma página com as informações detalhadas do prato.</p>
 
 <<<<<<< HEAD
-
-# Sumário
-
-=======
 Sumário
 =======
-
-> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
-
 <!--ts-->
 
 - 🛠 [Funcionalidades](#funcionalidades)
@@ -42,15 +35,8 @@ Sumário
 <!--te-->
 
 <<<<<<< HEAD
-
-# 🛠 Funcionalidades
-
-=======
 Funcionalidades
 ===============
-
-> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
-
 - [x] Criar conta;
 - [x] Fazer Login;
 - [x] Atualizar informações da conta;
@@ -60,15 +46,8 @@ Funcionalidades
 - [x] Admin: cadastrar, editar e excluir pratos.
 
 <<<<<<< HEAD
-
-# 🎯 Critérios Obrigatórios
-
-=======
 Critérios Obrigatórios
 =============================
-
-> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
-
 - Projeto estruturado com organização de pastas e divisão de componentes;
 - Armazenamento de dados em uma banco de dados;
 - Autenticação validada por senha na tela de login para acesso a aplicação utilizando JWT.
@@ -80,15 +59,8 @@ Critérios Obrigatórios
 - A aplicação deverá consumir sua própria API;
 
 <<<<<<< HEAD
-
-# 💻 Tecnologias
-
-=======
 Tecnologias
 ===========
-
-> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
-
 - [Axios](https://axios-http.com/docs/intro)
 - [React](https://pt-br.legacy.reactjs.org/)
 - [React-Icons](https://react-icons.github.io/react-icons/)
@@ -98,53 +70,29 @@ Tecnologias
 - [Vite](https://vitejs.dev/guide/)
 
 <<<<<<< HEAD
-
-# 🔑 Contas de demonstração
-
-## Usuário comum:
-
-<p> Login: user@foodexplorer.com</p>
-<p> Senha: 123456</p>
-
-## Usuário Admin:
-
-<p> Login: admin@foodexplorer.com </p>
-<p> Senha: 012345</p>
-
-# 💽 Instalação
-
-=======
-Contas de demonstraçãogit pu
+Contas de demonstração
 ======================
-
- <div>
  Usuário comum:
 ---------------
  <p> Login: user@foodexplorer.com</p>
  <p> Senha: 123456</p>
 
-## Usuário Admin:
+Usuário Admin:
+--------------
 
  <p> Login: admin@foodexplorer.com </p>
  <p> Senha: 012345</p>
 
-# Instalação
-
-> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
+<<<<<<< HEAD
+Instalação
+==========
 
 Para utilizar o projeto em sua máquina será necessário possuir as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Você precisará também de um editor como o [VSCode](https://code.visualstudio.com/).
 
 <<<<<<< HEAD
-
-# Rodando o Front End
-
-=======
 Rodando o Front End
 ===================
-
-> > > > > > > 0731daabb7cc4617ac7b0637a92db9bce66894af
-
 ```bash
 # Clone este repositório
 $ git clone https://github.com/jamile-xavier/FoodExplorer-Front.git
@@ -162,18 +110,21 @@ $ npm run dev
 
 ```
 
-# Autora
+Autora
+=======
 
 <p>[Jamile](https://github.com/jamile-xavier)</p>
 <p>[Linkedin](https://www.linkedin.com/in/jamile-xavier/)</p>
 
-# Links
+Links
+=====
 
 <p>
 [Repositorio-front](https://github.com/jamile-xavier/FoodExplorer-Front)</p>
 <p>[Repositorio-back](https://github.com/jamile-xavier/FoodExplorer-Back)</p>
 
-# Licença
+Licença
+========
 
 Licença MIT
 
