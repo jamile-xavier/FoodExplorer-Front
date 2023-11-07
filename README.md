@@ -15,7 +15,6 @@
 <p align="center">O admin é responsável pelo restaurante, sendo permitindo a criação, visualização, edição e exclusão de pratos. Os pratos deverão conter yma imagem, um nome, uma categoria, ingredientes, preço e uma breve descrição.</p>
 <p align="center">O usuário poderá visualizar todos os pratos cadastrados e ao clicar em um prato será redirecionado para uma página com as informações detalhadas do prato.</p>
 
-<<<<<<< HEAD
 Sumário
 =======
 <!--ts-->
@@ -34,7 +33,6 @@ Sumário
 - 📑 [Licença](#licenca)
 <!--te-->
 
-<<<<<<< HEAD
 Funcionalidades
 ===============
 - [x] Criar conta;
@@ -45,7 +43,6 @@ Funcionalidades
 - [x] Pesquisar por um prato;
 - [x] Admin: cadastrar, editar e excluir pratos.
 
-<<<<<<< HEAD
 Critérios Obrigatórios
 =============================
 - Projeto estruturado com organização de pastas e divisão de componentes;
@@ -58,7 +55,7 @@ Critérios Obrigatórios
 - Utilizar animações, transições e transformações para melhor experiência do usuário;
 - A aplicação deverá consumir sua própria API;
 
-<<<<<<< HEAD
+
 Tecnologias
 ===========
 - [Axios](https://axios-http.com/docs/intro)
@@ -69,7 +66,7 @@ Tecnologias
 - [EsLint](https://eslint.org/docs/latest/)
 - [Vite](https://vitejs.dev/guide/)
 
-<<<<<<< HEAD
+
 Contas de demonstração
 ======================
  Usuário comum:
@@ -83,14 +80,12 @@ Usuário Admin:
  <p> Login: admin@foodexplorer.com </p>
  <p> Senha: 012345</p>
 
-<<<<<<< HEAD
 Instalação
 ==========
 
 Para utilizar o projeto em sua máquina será necessário possuir as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Você precisará também de um editor como o [VSCode](https://code.visualstudio.com/).
 
-<<<<<<< HEAD
 Rodando o Front End
 ===================
 ```bash
@@ -109,7 +104,6 @@ $ npm run dev
 # A aplicação iniciará na porta 5173 - acesse <http://localhost:5173>
 
 ```
-
 Autora
 =======
 
