@@ -64,6 +64,7 @@
 - [Swiper](https://swiperjs.com/get-started)
 - [EsLint](https://eslint.org/docs/latest/)
 - [Vite](https://vitejs.dev/guide/)
+- [NetFly](https://www.netlify.com/)
 
 # Contas de demonstração
 
