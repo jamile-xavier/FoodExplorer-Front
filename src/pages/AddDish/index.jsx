@@ -114,8 +114,10 @@ export function AddDish() {
             <Input
               placeholder="Selecione a imagem"
               type="file"
+              accept=".png, .jpg, .jpeg"
               onChange={(e) => setImage(e.target.files[0])}
               id="image"
+              required
             />
           </div>
           <div className="name">
@@ -125,12 +127,17 @@ export function AddDish() {
               type="text"
               onChange={(e) => setTitle(e.target.value)}
               id="name"
+              required
             />
           </div>
           <div className="category">
             <label htmlFor="category"> Categoria </label>
 
-            <select onChange={(e) => setCategory(e.target.value)} id="category">
+            <select
+              onChange={(e) => setCategory(e.target.value)}
+              id="category"
+              required
+            >
               <option value="default">Selecione uma categoria</option>
               <option value="meals">Refeições</option>
               <option value="desserts">Sobremesas</option>
@@ -154,6 +161,7 @@ export function AddDish() {
                 onChange={(e) => setNewIngredient(e.target.value)}
                 onClick={handleAddIngredient}
                 id="ingredients"
+                required
               />
             </div>
           </div>
@@ -165,6 +173,7 @@ export function AddDish() {
               step="0.01"
               onChange={(e) => setPrice(e.target.value)}
               id="price"
+              required
             />
           </div>
           <div className="description">
@@ -174,6 +183,7 @@ export function AddDish() {
               placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
               onChange={(e) => setDescription(e.target.value)}
               id="description"
+              required
             />
           </div>
         </Form>

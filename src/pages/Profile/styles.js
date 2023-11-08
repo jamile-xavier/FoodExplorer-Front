@@ -55,8 +55,8 @@ export const Avatar = styled.form`
   }
 
   > label {
-    width: 3.8rem;
-    height: 3.8rem;
+    width: 3rem;
+    height: 3rem;
     background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
     border-radius: 50%;
 
@@ -66,7 +66,7 @@ export const Avatar = styled.form`
 
     position: absolute;
     bottom: 7.2rem;
-    right: 3.8rem;
+    right: 4.8rem;
     cursor: pointer;
 
     input {
@@ -74,8 +74,8 @@ export const Avatar = styled.form`
     }
 
     svg {
-      width: 20px;
-      height: 20px;
+      width: 50rem;
+      height: 4rem;
       color: ${({ theme }) => theme.COLORS.LIGHT_100};
     }
   }
@@ -89,10 +89,10 @@ export const Avatar = styled.form`
     }
 
     > label {
-      width: 4.8rem;
-      height: 4.8rem;
-      bottom: 3.2rem;
-      right: 0.8rem;
+      width: 4rem;
+      height: 4rem;
+      bottom: 3rem;
+      right: 3rem;
     }
   }
 `;

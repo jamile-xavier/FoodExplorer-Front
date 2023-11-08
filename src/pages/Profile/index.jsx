@@ -67,7 +67,12 @@ export function Profile() {
           <img src={avatar} alt="Foto do usuário" />
           <label htmlFor="avatar">
             <AiOutlineCamera />
-            <input type="file" id="avatar" onChange={handleChangeAvatar} />
+            <Input
+              type="file"
+              accept=".png, .jpg, .jpeg"
+              id="avatar"
+              onChange={handleChangeAvatar}
+            />
           </label>
         </Avatar>
         <label htmlFor="nome">

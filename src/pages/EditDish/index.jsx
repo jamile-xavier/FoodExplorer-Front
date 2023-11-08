@@ -169,8 +169,10 @@ export function EditDish() {
               <Input
                 placeholder="Selecione a imagem"
                 type="file"
+                accept=".png, .jpg, .jpeg"
                 onChange={handleChangeImage}
                 id="image"
+                required
               />
             </label>
           </Image>
@@ -182,6 +184,7 @@ export function EditDish() {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               id="name"
+              required
             />
           </div>
           <div className="category">
@@ -191,6 +194,7 @@ export function EditDish() {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
               id="category"
+              required
             >
               <option value="default">Selecione uma categoria</option>
               <option value="meals">Refeições</option>
@@ -215,6 +219,7 @@ export function EditDish() {
                 onChange={(e) => setNewIngredient(e.target.value)}
                 onClick={handleAddIngredient}
                 id="ingredients"
+                required
               />
             </div>
           </div>
@@ -227,6 +232,7 @@ export function EditDish() {
               value={price}
               onChange={(e) => setPrice(e.target.value)}
               id="price"
+              required
             />
           </div>
           <div className="description">
@@ -237,6 +243,7 @@ export function EditDish() {
               defaultValue={description}
               onChange={(e) => setDescription(e.target.value)}
               id="description"
+              required
             />
           </div>
         </Form>
