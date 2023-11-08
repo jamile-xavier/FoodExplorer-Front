@@ -3,11 +3,12 @@
 </div>
 
 <h1 align="center"> FOOD EXPLORER - FRONT END </h1>
+<a href="https://foodexplorer-rocket.netlify.app/" target="_blank" rel="noopener noreferrer">Link Deploy</a>
 
 ## Descrição do Projeto
 
 <h1 align="center">
-<a href="https://foodexplorer-rocket.netlify.app/">Food Explorer (Link Deploy)</a>
+Food Explorer 
 </h1>
 <p align="center"> O Food Explorer é uma aplicação responsiva que simula um menu interativo para um restaurante fictício. </p>
 <p align="center">A aplicação é baseada em modelo disponibilizado no Figma e possui duas personas: o admin e o usuário.</p>
