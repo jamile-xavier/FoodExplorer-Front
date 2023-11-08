@@ -3,8 +3,9 @@
 </div>
 
 <h1 align="center"> FOOD EXPLORER - FRONT END </h1>
-<a href="https://foodexplorer-rocket.netlify.app/" target="_blank" rel="noopener noreferrer">Link Deploy</a>
-
+<h2>
+<a href="https://foodexplorer-rocket.netlify.app/" target="_blank" rel="noopener noreferrer">✔ Link Deploy</a>
+</h2>
 ## Descrição do Projeto
 
 <h1 align="center">
