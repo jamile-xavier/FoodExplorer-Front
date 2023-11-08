@@ -4,7 +4,7 @@
 
 <h1 align="center"> FOOD EXPLORER - FRONT END </h1>
 <h2>
-<a href="https://foodexplorer-rocket.netlify.app/" target="_blank" rel="noopener noreferrer">✔ Link Deploy</a>
+<a href="https://foodexplorer-rocket.netlify.app/" target="_blank" rel="noopener noreferrer">✔ Site em funcionamento</a>
 </h2>
 
 ## Descrição do Projeto
